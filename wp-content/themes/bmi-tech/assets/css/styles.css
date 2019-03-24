@@ -35,6 +35,10 @@
     font-family: SFHeavy;
     src: url("../fonts/SF-Pro-Display-Heavy.ttf");
 }
+@font-face {
+    font-family: SanFranciscoDisplayThin;
+    src: url("../fonts/SF-Pro-Display-Thin.otf");
+}
 
 a {
     color:  #0463be;
@@ -597,4 +601,12 @@ hr {
     right: 0;
     position: absolute;
     margin-top: -55px;
+}
+
+.copyright {
+    background: #0373de;
+    padding: 15px;
+    color: #fff;
+    font-family: SanFranciscoDisplayThin;
+    text-align: center;
 }

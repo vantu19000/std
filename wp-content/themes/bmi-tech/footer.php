@@ -67,6 +67,12 @@ $general = $config->general->params;
             </div>
         </div>
     </div>
+
+    <div class="copyright">
+        <img src="<?= get_template_directory_uri() ?>/assets/images/favicon-32x32.png" alt="icon footer">
+        Copyright © <?= date('Y') ?> Thiết kế - Sơn Tĩnh Điện
+    </div>
+
 </footer>
 
 

@@ -47,7 +47,7 @@
 
 </head>
 
-<body>
+<body id="main">
 
 <?php require 'layouts/menu.php' ?>
 

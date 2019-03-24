@@ -13,16 +13,17 @@ $primaryNav = wp_get_nav_menu_items($menuID);
 <style>
     /* The side navigation menu */
     .sidenav {
+        position: absolute;
         height: 100%; /* 100% Full-height */
-        width: 0; /* 0 width - change this with JavaScript */
-        position: fixed; /* Stay in place */
-        z-index: 1; /* Stay on top */
+        /*position: fixed; !* Stay in place *!*/
+        z-index: 99991; /* Stay on top */
         top: 0; /* Stay at the top */
         left: 0;
-        background-color: #0463be; /* Black*/
+        background-color: #4099a6; /* Black*/
         overflow-x: hidden; /* Disable horizontal scroll */
         padding-top: 60px; /* Place content 60px from the top */
         transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+        width: 60%;
     }
 
     /* The navigation menu links */
@@ -44,15 +45,32 @@ $primaryNav = wp_get_nav_menu_items($menuID);
     .sidenav .closebtn {
         position: absolute;
         top: 0;
-        right: 25px;
+        right: 5px;
+        left: 120px;
         font-size: 36px;
-        margin-left: 50px;
+        /*margin-left: 50px;*/
+    }
+
+    .mobilediv {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: 99990;
+        transition: margin-left .5s;
+        margin-left: -100%;
+    }
+    .closemobilenav{
+        /*width: 35%;*/
+        height: 100%;
+        background: transparent;
+        opacity: 0.7;
+        z-index: 99992;
     }
 
     /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
     #main {
         transition: margin-left .5s;
-        padding: 20px;
+        /*padding: 20px;*/
     }
 
     /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
@@ -64,22 +82,26 @@ $primaryNav = wp_get_nav_menu_items($menuID);
 
 <script>
     function openNav() {
-        document.getElementById("mySidenav").style.width = "250px";
-        document.getElementById("main").style.marginLeft = "250px";
+        // document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("mobilediv").style.marginLeft = "0";
     }
     function closeNav() {
-        document.getElementById("mySidenav").style.width = "0";
-        document.getElementById("main").style.marginLeft = "0";
+        // document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("mobilediv").style.marginLeft = "-100%";
     }
 
 </script>
 
-<div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-	<?php foreach ($primaryNav AS $value): ?>
-        <a href="<?= $value->url ?>"><?= $value->title ?></a>
-    <?php endforeach; ?>
+<div class="mobilediv" id="mobilediv">
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <?php foreach ($primaryNav AS $value): ?>
+            <a href="<?= $value->url ?>"><?= $value->title ?></a>
+        <?php endforeach; ?>
+    </div>
+    <div class="closemobilenav" onclick="closeNav()"></div>
 </div>
+
 
 <section class="menu-header" style="background: #0463be;">
     <div class="container navbar navbar-expand-lg navbar-dark">
