@@ -267,10 +267,6 @@ img{
     margin: 0px;
     margin-bottom: 10px;
 }
-
-.footer .footer-logo{
-    margin: 20px;
-}
 .footer {
     background: #0463be;
 }
@@ -281,6 +277,12 @@ img{
     float: left;
     text-align: center;
     width: 100%;
+    margin-top: 20px;
+}
+.footer .footer-info li a{
+    font-family: SanFranciscoDisplayRegular;
+    text-transform: uppercase;
+    margin-left: -40px;
 }
 .footer .footer-info{
     margin-top: 20px;
@@ -294,7 +296,9 @@ img{
         /*padding-left: 0px*/
     /*}*/
 }
-
+.footer .product-list{
+    margin-left: 40px;
+}
 .footer .footer-list li{
     list-style: none;
 }
@@ -303,14 +307,17 @@ a:hover{
     color: #a1a9b0;
 }
 .footer .footer-list li a{
-    font-family: NexaBold;
+    font-family: SanFranciscoDisplayRegular;
     color: #fff;
     /*text-transform: uppercase;*/
 }
 
 .footer .company-information ul{
-    font-family: NexaBold;
+    font-family: SanFranciscoDisplayRegular;
     margin-left: -20px;
+}
+.footer .company-information h6{
+    font-family: SanFranciscoDisplayRegular;
 }
 .footer .company-information {
     color: #fff;
@@ -609,4 +616,7 @@ hr {
     color: #fff;
     font-family: SanFranciscoDisplayThin;
     text-align: center;
+}
+.socialbox {
+    background: #034585;
 }
