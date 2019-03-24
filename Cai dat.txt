@@ -1,0 +1,15 @@
+copy code vao htdoc
+
+mo file wp-config.php Suar lai ten Database, user pass
+
+import database va` vao` bang wp_options sua "siteurl" va` "home" thanh` url cua anh (vi du: http:localhost/abcde ) 
+
+
+login admin: localhost/ten_website/wp-admin
+
+
+admin
+123456
+
+
+https://github.com/vantu19000/std
