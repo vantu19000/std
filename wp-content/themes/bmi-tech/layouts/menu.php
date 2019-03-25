@@ -41,11 +41,12 @@ $primaryNav = wp_get_nav_menu_items($menuID);
                          style="width: 100px;margin-top: -15px;" />
                 </a>
             </div>
-            <div class="col-md-9">
+            <div class="col-md-9" style="position:relative;">
                 <button id="mobileToog" class="navbar-toggler collapsed menu-mobile" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="mobilemenu collapse" id="navbarResponsive">
+                    <?php if (1 == 2): ?>
                     <div class="row">
                         <div class="col-md-8"></div>
                         <div class="col-md-4">
@@ -61,7 +62,9 @@ $primaryNav = wp_get_nav_menu_items($menuID);
                             </div>
                         </div>
                     </div>
-                    <div class="row">
+                    <?php endif; ?>
+
+                    <div class="row" style="position: absolute;bottom: 0;right: 0;">
                         <div class="col-md-12">
                             <ul class="mainmenu">
                                 <?php foreach ($primaryNav AS $value): ?>
