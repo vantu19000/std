@@ -16,11 +16,15 @@ $products = new WP_Query($args);
 
 ?>
 
+<?php require 'layouts/slide8.php'; ?>
+
+
 <div class="container" style="margin-top: 20px;margin-bottom: 20px;">
 
     <div class="row">
 
-        <div class="col-md-4 categories" style="background: transparent;">
+        <div class="col-md-3" style="background: transparent;">
+        <?php if (1 == 2): ?>
             <div class="categoryBox">
                 <h3 class="heading text-center" style="margin-bottom:0px;background: #0463be;color: #fff;">DANH MỤC <br>SƠN TĨNH ĐIỆN</h3>
                 <div class="category-items">
@@ -40,26 +44,25 @@ $products = new WP_Query($args);
                         <option value="">SẢN PHẨM NỔI BẬT</option>
                     </select>
                 </div>
-
             </div>
-
+            <?php endif; ?>
+            <?php dynamic_sidebar('left-sidebar-3'); ?>
             <div class="mt-3"></div>
 
-            <?php dynamic_sidebar('left-sidebar-3'); ?>
-
         </div>
-        <div class="col-md-8">
+
+        <div class="col-md-9">
 
             <div class="row">
                 <div class="col-md-12">
                     <img style="height: 120px; width: 100%"
-                            src="<?= get_template_directory_uri() . '/assets/images/banner/banner-production.png' ?>" alt="">
+                         src="<?= get_template_directory_uri() . '/assets/images/banner/banner-production.png' ?>" alt="">
                 </div>
             </div>
             <div class="row" style="margin-bottom: 10px;">
                 <div class="col-md-12">
                     <div class="mt-3"></div>
-                    <h1 style="font-size: 25px;color: #0463be;font-family: SanFranciscoDisplayBold;">
+                    <h1 class="header-product">
                         Sản phẩm
                     </h1>
                     <h1 style="border: solid 2px #0463be;"></h1>

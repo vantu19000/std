@@ -288,17 +288,12 @@ img{
     margin-top: 20px;
 }
 
-@media only screen and (max-width: 728px) {
-
-
-
-    /*.footer .footer-list {*/
-        /*padding-left: 0px*/
-    /*}*/
+@media only screen and (min-width: 728px) {
+    .footer .product-list{
+        margin-left: 40px;
+    }
 }
-.footer .product-list{
-    margin-left: 40px;
-}
+
 .footer .footer-list li{
     list-style: none;
 }
@@ -687,4 +682,12 @@ hr {
     font-family: SFHeavy;
     font-size: 18px;
     text-transform: uppercase;
+}
+.title-product {
+    font-family: SanFranciscoDisplayMedium;
+}
+
+.header-product{
+    text-transform: uppercase;
+    font-size: 25px;color: #0463be;font-family: SanFranciscoDisplayBold;
 }
