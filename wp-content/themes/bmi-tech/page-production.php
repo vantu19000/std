@@ -96,7 +96,7 @@ $products = new WP_Query($args);
 				            <?php $thumbnail = get_the_post_thumbnail_url($post->ID, 'product_cate'); ?>
                             <div class="col-md-3 productitem">
                                 <a href="<?= get_the_permalink() ?>">
-                                    <img style="max-height: 289px; width: 100%"
+                                    <img style="height: 289px; width: 100%"
                                          src="<?= $thumbnail ?>" alt="">
                                     <p class="text-center title-product" style="margin-top: 5px;color: #0463be;">
 							            <?= get_the_title() ?>
@@ -112,7 +112,7 @@ $products = new WP_Query($args);
 				            <?php $thumbnail = get_the_post_thumbnail_url($post->ID, 'product_cate'); ?>
                             <div class="col-md-3 productitem">
                                 <a href="<?= get_the_permalink() ?>">
-                                    <img style="max-height: 289px; width: 100%"
+                                    <img style="height: 289px; width: 100%"
                                          src="<?= $thumbnail ?>" alt="">
                                     <p class="text-center title-product" style="margin-top: 5px;color: #0463be;">
 							            <?= get_the_title() ?>
@@ -163,7 +163,7 @@ $products = new WP_Query($args);
 					        <?php $thumbnail = get_the_post_thumbnail_url($post->ID, 'product_cate'); ?>
                             <div class="col-md-3 productitem">
                                 <a href="<?= get_the_permalink() ?>">
-                                    <img style="max-height: 289px; width: 100%"
+                                    <img style="height: 289px; width: 100%"
                                          src="<?= $thumbnail ?>" alt="">
                                     <p class="text-center title-product" style="margin-top: 5px;color: #0463be;">
 								        <?= get_the_title() ?>
@@ -179,7 +179,7 @@ $products = new WP_Query($args);
 					        <?php $thumbnail = get_the_post_thumbnail_url($post->ID, 'product_cate'); ?>
                             <div class="col-md-3 productitem">
                                 <a href="<?= get_the_permalink() ?>">
-                                    <img style="max-height: 289px; width: 100%"
+                                    <img style="height: 289px; width: 100%"
                                          src="<?= $thumbnail ?>" alt="">
                                     <p class="text-center title-product" style="margin-top: 5px;color: #0463be;">
 								        <?= get_the_title() ?>
@@ -230,7 +230,7 @@ $products = new WP_Query($args);
 					        <?php $thumbnail = get_the_post_thumbnail_url($post->ID, 'product_cate'); ?>
                             <div class="col-md-3 productitem">
                                 <a href="<?= get_the_permalink() ?>">
-                                    <img style="max-height: 289px; width: 100%"
+                                    <img style="height: 289px; width: 100%"
                                          src="<?= $thumbnail ?>" alt="">
                                     <p class="text-center title-product" style="margin-top: 5px;color: #0463be;">
 								        <?= get_the_title() ?>
@@ -246,7 +246,7 @@ $products = new WP_Query($args);
 					        <?php $thumbnail = get_the_post_thumbnail_url($post->ID, 'product_cate'); ?>
                             <div class="col-md-3 productitem">
                                 <a href="<?= get_the_permalink() ?>">
-                                    <img style="max-height: 289px; width: 100%"
+                                    <img style="height: 289px; width: 100%"
                                          src="<?= $thumbnail ?>" alt="">
                                     <p class="text-center title-product" style="margin-top: 5px;color: #0463be;">
 								        <?= get_the_title() ?>
@@ -297,7 +297,7 @@ $products = new WP_Query($args);
 					        <?php $thumbnail = get_the_post_thumbnail_url($post->ID, 'product_cate'); ?>
                             <div class="col-md-3 productitem">
                                 <a href="<?= get_the_permalink() ?>">
-                                    <img style="max-height: 289px; width: 100%"
+                                    <img style="height: 289px; width: 100%"
                                          src="<?= $thumbnail ?>" alt="">
                                     <p class="text-center title-product" style="margin-top: 5px;color: #0463be;">
 								        <?= get_the_title() ?>
@@ -313,7 +313,7 @@ $products = new WP_Query($args);
 					        <?php $thumbnail = get_the_post_thumbnail_url($post->ID, 'product_cate'); ?>
                             <div class="col-md-3 productitem">
                                 <a href="<?= get_the_permalink() ?>">
-                                    <img style="max-height: 289px; width: 100%"
+                                    <img style="height: 289px; width: 100%"
                                          src="<?= $thumbnail ?>" alt="">
                                     <p class="text-center title-product" style="margin-top: 5px;color: #0463be;">
 								        <?= get_the_title() ?>
