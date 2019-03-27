@@ -331,7 +331,7 @@ a:hover{
     }
     .menu-header .mainmenu li{
         float: left;
-        padding-left: 5px;
+        padding-left: 15px;
         list-style: none;
     }
     .menu-header .mainmenu li a:last-child{
@@ -690,4 +690,11 @@ hr {
 .header-product{
     text-transform: uppercase;
     font-size: 25px;color: #0463be;font-family: SanFranciscoDisplayBold;
+}
+
+.product-linebox{
+    border: solid 2px #0463be;
+}
+.product-linechild{
+    left: 100px;top: -4px;height: 10px;width: 40px;background: #0463be;position:absolute;
 }
