@@ -699,7 +699,7 @@ hr {
     left: 100px;top: -4px;height: 10px;width: 40px;background: #0463be;position:absolute;
 }
 .slick-slide {
-    margin: 0 10px 0 0;
+    margin: 20px 10px 0 0;
 }
 /* the parent */
 .slick-list {

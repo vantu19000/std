@@ -126,7 +126,7 @@ $products = new WP_Query($args);
             </div>
 
             <script>
-                var slide<?= $i ?> = $('.lazy<?= $i ?>').slick({
+                $('.lazy<?= $i ?>').slick({
                     lazyLoad: 'ondemand',
                     slidesToShow: 4,
                     slidesToScroll: 1,
@@ -158,10 +158,10 @@ $products = new WP_Query($args);
                     ]
                 });
                 $('.nextpro<?= $i ?>').click(function () {
-                    slide<?= $i ?>.slickNext();
+                    $('.lazy<?= $i ?>').slick('slickNext');
                 })
                 $('.prepro<?= $i ?>').click(function () {
-                    slide<?= $i ?>.slickPrev();
+                    $('.lazy<?= $i ?>').slick('slickPrev');
                 })
 
             </script>
@@ -183,28 +183,6 @@ $products = new WP_Query($args);
         text-underline: none;
     }
 </style>
-
-    <script>
-        <?php for ($i = 1; $i <= 4; $i ++): ?>
-        var proSlider<?= $i ?> = $('.slideproduct<?= $i ?>').bxSlider({
-            pager: false,
-            controls: false,
-            slideMargin: 10,
-            startSlide: 2,
-            <?php if (!wp_is_mobile()): ?>
-            touchEnabled: false,
-            <?php endif; ?>
-        });
-        jQuery(".nextpro<?= $i ?>").click(function () {
-            // alert('next');
-            proSlider<?= $i ?>.goToNextSlide();
-        })
-        jQuery(".prepro<?= $i ?>").click(function () {
-            // alert('pre');
-            proSlider<?= $i ?>.goToPrevSlide();
-        })
-        <?php endfor; ?>
-    </script>
 
 
 <?php
