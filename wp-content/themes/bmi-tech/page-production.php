@@ -24,31 +24,8 @@ $products = new WP_Query($args);
     <div class="row">
 
         <div class="col-md-3" style="background: transparent;">
-        <?php if (1 == 2): ?>
-            <div class="categoryBox">
-                <h3 class="heading text-center" style="margin-bottom:0px;background: #0463be;color: #fff;">DANH MỤC <br>SƠN TĨNH ĐIỆN</h3>
-                <div class="category-items">
-                    <select class="classic chan">
-                        <option value="">CỬA CỔNG</option>
-                    </select>
-                    <select class="classic le">
-                        <option value="">VỎ TỦ ĐIỆN</option>
-                    </select>
-                    <select class="classic chan">
-                        <option value="">KỆ GIÁ HÀNG</option>
-                    </select>
-                    <select class="classic le">
-                        <option value="">THANG - MÁNG CÁP</option>
-                    </select>
-                    <select class="classic chan">
-                        <option value="">SẢN PHẨM NỔI BẬT</option>
-                    </select>
-                </div>
-            </div>
-            <?php endif; ?>
             <?php dynamic_sidebar('left-sidebar-3'); ?>
             <div class="mt-3"></div>
-
         </div>
 
         <div class="col-md-9">
@@ -62,9 +39,7 @@ $products = new WP_Query($args);
 
             <?php
             $demo = array(
-                1 => array(
-                        'title' => 'CỬA CỔNG'
-                ),
+                1 => array('title' => 'CỬA CỔNG'),
                 2 => array(
                     'title' => 'VỎ TỦ ĐIỆN'
                 ),
@@ -89,7 +64,7 @@ $products = new WP_Query($args);
                 <div class="col-md-6">
                     <div class="row">
                         <div class="col-md-12">
-                            <img style="position: absolute;right: 15px;margin-top: 15px;"
+                            <img class="imgnexpre"
                                  src="<?= get_template_directory_uri() . '/assets/images/icon/nextpre.png'; ?>" usemap="#nexprev<?= $i ?>">
                             <map name="nexprev<?= $i ?>">
                                 <area href="javascript:void(0)" coords="1,2,32,32" shape="rect" class="nextpro<?= $i ?>">

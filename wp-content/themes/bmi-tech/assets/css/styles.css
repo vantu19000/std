@@ -694,6 +694,7 @@ hr {
 
 .product-linebox{
     border: solid 2px #0463be;
+    background: #0463be;
 }
 .product-linechild{
     left: 100px;top: -4px;height: 10px;width: 40px;background: #0463be;position:absolute;
@@ -704,4 +705,16 @@ hr {
 /* the parent */
 .slick-list {
     /*margin: 0 -10px;*/
+}
+
+@media screen and (min-height: 764px) {
+    .imgnexpre {
+        position: absolute;right: 15px;margin-top: 15px;
+    }
+}
+
+@media screen and (max-height: 764px) {
+    .imgnexpre {
+        position: absolute;right: 15px;margin-top: -35px;
+    }
 }
