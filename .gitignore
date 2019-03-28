@@ -23,6 +23,7 @@ wp-admin
 wp-content/*
 !wp-content/plugins/
 wp-content/plugins/advanced-custom-fields
+wp-content/plugins/akismet
 !wp-content/plugins/bmi-tech/
 !wp-content/themes/
 wp-content/themes/twentynineteen
