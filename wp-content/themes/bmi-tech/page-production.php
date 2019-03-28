@@ -290,12 +290,13 @@ $products = new WP_Query($args);
                 </div>
             </div>
 
+
             <div class="slideproduct4">
                 <div class="row">
 			        <?php for ($i = 0; $i < 2; $i ++): ?>
 				        <?php while ($products->have_posts()) : $products->the_post(); ?>
 					        <?php $thumbnail = get_the_post_thumbnail_url($post->ID, 'product_cate'); ?>
-                            <div class="col-md-3 productitem">
+                            <div class="col-1 col-md-3 productitem">
                                 <a href="<?= get_the_permalink() ?>">
                                     <img style="height: 289px; width: 100%"
                                          src="<?= $thumbnail ?>" alt="">
@@ -311,7 +312,7 @@ $products = new WP_Query($args);
 			        <?php for ($i = 0; $i < 2; $i ++): ?>
 				        <?php while ($products->have_posts()) : $products->the_post(); ?>
 					        <?php $thumbnail = get_the_post_thumbnail_url($post->ID, 'product_cate'); ?>
-                            <div class="col-md-3 productitem">
+                            <div class="col-1 col-md-3 productitem">
                                 <a href="<?= get_the_permalink() ?>">
                                     <img style="height: 289px; width: 100%"
                                          src="<?= $thumbnail ?>" alt="">
@@ -350,7 +351,9 @@ $products = new WP_Query($args);
             controls: false,
             slideMargin: 10,
             startSlide: 2,
-            // touchEnabled: false,
+            <?php if (!wp_is_mobile()): ?>
+            touchEnabled: false,
+            <?php endif; ?>
         });
         jQuery(".nextpro<?= $i ?>").click(function () {
             // alert('next');

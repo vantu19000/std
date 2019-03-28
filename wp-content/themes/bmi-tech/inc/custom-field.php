@@ -345,7 +345,7 @@ function display_meta_options($post){
     <p>Giữ phím ctr và chọn nhiều ảnh</p>
 
     <div class="group_meta_items">
-        <?php if (count($_meta) > 0): ?>
+        <?php if (is_array($_meta) && count($_meta) > 0): ?>
         <?php foreach ($_meta AS $value): ?>
         <div class="group_meta_item">
             <img src="<?= $value->url ?>" class="image_show">

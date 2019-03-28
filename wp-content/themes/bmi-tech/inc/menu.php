@@ -1,17 +1,12 @@
 <?php
 
-
 function bmiGetMenu($position = 'menu-1'){
 
     $menuLocations = get_nav_menu_locations();
     $menuID = $menuLocations[$position];
     $menu = wp_get_nav_menu_items($menuID);
 
-//    echo "<pre>";
-//    print_r($menu);
-//    die;
-
-    if ($menu) {
+    if ($menu && is_array($menu) && count($menu) > 0) {
         echo '<ul class="navbar-nav ml-auto">';
         foreach ($menu AS $value) {
             if ($value->menu_item_parent == 0){

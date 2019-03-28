@@ -98,7 +98,7 @@ $items = array_slice($recentProduct, -5);
 
         <hr size="30">
 
-        <?php if (count($items) > 0): ?>
+        <?php if (is_array($items) && count($items) > 0): ?>
 
         <div class="row">
             <div class="col-md-12">

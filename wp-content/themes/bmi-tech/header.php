@@ -36,6 +36,7 @@
 
     <?php if (!is_home()): ?>
         <script src="<?= get_template_directory_uri() ?>/assets/libraries/slick/slick.js"></script>
+        <link rel="stylesheet" href="<?= get_template_directory_uri() ?>/assets/libraries/slick/slick.css">
     <?php endif; ?>
     <?php wp_head(); ?>
 

@@ -67,11 +67,13 @@ $primaryNav = wp_get_nav_menu_items($menuID);
                     <div class="row" style="position: absolute;bottom: 0;right: 0;">
                         <div class="col-md-12">
                             <ul class="mainmenu">
-                                <?php foreach ($primaryNav AS $value): ?>
-                                    <li class="nav-item">
-                                        <a class="nav-link js-scroll-trigger" href="<?= $value->url ?>"><?= $value->title ?></a>
-                                    </li>
-                                <?php endforeach; ?>
+                                <?php if (is_array($primaryNav) && count($primaryNav) > 0): ?>
+                                    <?php foreach ($primaryNav AS $value): ?>
+                                        <li class="nav-item">
+                                            <a class="nav-link js-scroll-trigger" href="<?= $value->url ?>"><?= $value->title ?></a>
+                                        </li>
+                                    <?php endforeach; ?>
+                                <?php endif; ?>
                             </ul>
                         </div>
                     </div>
