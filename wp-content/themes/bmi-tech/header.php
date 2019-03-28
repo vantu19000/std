@@ -34,7 +34,7 @@
     <script src="<?= get_template_directory_uri() ?>/assets/js/bootstrap.bundle.min.js"></script>
     <script src="<?= get_template_directory_uri() ?>/assets/js/bootsnav.js"></script>
 
-    <?php if (!is_home()): ?>
+    <?php if (1==1): ?>
         <script src="<?= get_template_directory_uri() ?>/assets/libraries/slick/slick.js"></script>
         <link rel="stylesheet" href="<?= get_template_directory_uri() ?>/assets/libraries/slick/slick.css">
     <?php endif; ?>
