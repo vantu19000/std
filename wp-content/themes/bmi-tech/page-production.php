@@ -60,21 +60,40 @@ $products = new WP_Query($args);
                 </div>
             </div>
 
+            <?php
+            $demo = array(
+                1 => array(
+                        'title' => 'CỬA CỔNG'
+                ),
+                2 => array(
+                    'title' => 'VỎ TỦ ĐIỆN'
+                ),
+                3 => array(
+                    'title' => 'KỆ - GIÁ HÀNG'
+                ),
+                4 => array(
+                    'title' => 'THANG - MÁNG CÁP'
+                )
+            );
+            ?>
+
+            <?php for ($i = 1; $i < 4; $i ++): ?>
+
             <div class="row" style="margin-bottom: 10px;">
                 <div class="col-md-6">
                     <div class="mt-3"></div>
                     <h1 class="header-product">
-                        CỬA CỔNG
+                        <?= $demo[$i]['title'] ?>
                     </h1>
                 </div>
                 <div class="col-md-6">
                     <div class="row">
                         <div class="col-md-12">
                             <img style="position: absolute;right: 15px;margin-top: 15px;"
-                                    src="<?= get_template_directory_uri() . '/assets/images/icon/nextpre.png'; ?>" usemap="#nexprev1">
-                            <map name="nexprev1">
-                                <area href="javascript:void(0)" coords="1,2,32,32" shape="rect" class="nextpro1">
-                                <area href="javascript:void(0)" coords="34,0,66,32" shape="rect" class="prepro1">
+                                 src="<?= get_template_directory_uri() . '/assets/images/icon/nextpre.png'; ?>" usemap="#nexprev<?= $i ?>">
+                            <map name="nexprev<?= $i ?>">
+                                <area href="javascript:void(0)" coords="1,2,32,32" shape="rect" class="nextpro<?= $i ?>">
+                                <area href="javascript:void(0)" coords="34,0,66,32" shape="rect" class="prepro<?= $i ?>">
                             </map>
                         </div>
                     </div>
@@ -89,244 +108,65 @@ $products = new WP_Query($args);
                 </div>
             </div>
 
-            <div class="slideproduct1">
-                <div class="row">
-		            <?php for ($i = 0; $i < 2; $i ++): ?>
-			            <?php while ($products->have_posts()) : $products->the_post(); ?>
-				            <?php $thumbnail = get_the_post_thumbnail_url($post->ID, 'product_cate'); ?>
-                            <div class="col-md-3 productitem">
-                                <a href="<?= get_the_permalink() ?>">
-                                    <img style="height: 289px; width: 100%"
-                                         src="<?= $thumbnail ?>" alt="">
-                                    <p class="text-center title-product" style="margin-top: 5px;color: #0463be;">
-							            <?= get_the_title() ?>
-                                    </p>
-                                </a>
-                            </div>
-			            <?php endwhile; wp_reset_postdata(); ?>
-		            <?php endfor; ?>
-                </div>
-                <div class="row">
-		            <?php for ($i = 0; $i < 2; $i ++): ?>
-			            <?php while ($products->have_posts()) : $products->the_post(); ?>
-				            <?php $thumbnail = get_the_post_thumbnail_url($post->ID, 'product_cate'); ?>
-                            <div class="col-md-3 productitem">
-                                <a href="<?= get_the_permalink() ?>">
-                                    <img style="height: 289px; width: 100%"
-                                         src="<?= $thumbnail ?>" alt="">
-                                    <p class="text-center title-product" style="margin-top: 5px;color: #0463be;">
-							            <?= get_the_title() ?>
-                                    </p>
-                                </a>
-                            </div>
-			            <?php endwhile; wp_reset_postdata(); ?>
-		            <?php endfor; ?>
-                </div>
-            </div>
-
-
-
-
-            <div class="row" style="margin-bottom: 10px;">
-                <div class="col-md-6">
-                    <div class="mt-3"></div>
-                    <h1 class="header-product">
-                        VỎ TỦ ĐIỆN
-                    </h1>
-                </div>
-                <div class="col-md-6">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <img style="position: absolute;right: 15px;margin-top: 15px;"
-                                 src="<?= get_template_directory_uri() . '/assets/images/icon/nextpre.png'; ?>" usemap="#nexprev2">
-                            <map name="nexprev2">
-                                <area href="javascript:void(0)" coords="1,2,32,32" shape="rect" class="nextpro2">
-                                <area href="javascript:void(0)" coords="34,0,66,32" shape="rect" class="prepro2">
-                            </map>
+            <div class="slider<?= $i ?> lazy<?= $i ?>">
+                <?php for ($j = 0; $j < 3; $j ++): ?>
+                    <?php while ($products->have_posts()) : $products->the_post(); ?>
+                        <?php $thumbnail = get_the_post_thumbnail_url($post->ID, 'product_cate'); ?>
+                        <div class="productitem">
+                            <a href="<?= get_the_permalink() ?>">
+                                <img style="height: 289px; width: 100%"
+                                     src="<?= $thumbnail ?>" alt="">
+                                <p class="text-center title-product" style="margin-top: 5px;color: #0463be;">
+                                    <?= get_the_title() ?>
+                                </p>
+                            </a>
                         </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="row" style="margin-bottom: 20px;">
-                <div class="col-md-12">
-                    <div class="product-linebox">
-                        <div class="product-linechild"></div>
-                    </div>
-                </div>
+                    <?php endwhile; wp_reset_postdata(); ?>
+                <?php endfor; ?>
             </div>
 
-            <div class="slideproduct2">
-                <div class="row">
-			        <?php for ($i = 0; $i < 2; $i ++): ?>
-				        <?php while ($products->have_posts()) : $products->the_post(); ?>
-					        <?php $thumbnail = get_the_post_thumbnail_url($post->ID, 'product_cate'); ?>
-                            <div class="col-md-3 productitem">
-                                <a href="<?= get_the_permalink() ?>">
-                                    <img style="height: 289px; width: 100%"
-                                         src="<?= $thumbnail ?>" alt="">
-                                    <p class="text-center title-product" style="margin-top: 5px;color: #0463be;">
-								        <?= get_the_title() ?>
-                                    </p>
-                                </a>
-                            </div>
-				        <?php endwhile; wp_reset_postdata(); ?>
-			        <?php endfor; ?>
-                </div>
-                <div class="row">
-			        <?php for ($i = 0; $i < 2; $i ++): ?>
-				        <?php while ($products->have_posts()) : $products->the_post(); ?>
-					        <?php $thumbnail = get_the_post_thumbnail_url($post->ID, 'product_cate'); ?>
-                            <div class="col-md-3 productitem">
-                                <a href="<?= get_the_permalink() ?>">
-                                    <img style="height: 289px; width: 100%"
-                                         src="<?= $thumbnail ?>" alt="">
-                                    <p class="text-center title-product" style="margin-top: 5px;color: #0463be;">
-								        <?= get_the_title() ?>
-                                    </p>
-                                </a>
-                            </div>
-				        <?php endwhile; wp_reset_postdata(); ?>
-			        <?php endfor; ?>
-                </div>
-            </div>
+            <script>
+                var slide<?= $i ?> = $('.lazy<?= $i ?>').slick({
+                    lazyLoad: 'ondemand',
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    autoplay: false,
+                    responsive: [
+                        {
+                            breakpoint: 1200,
+                            settings: {
+                                slidesToShow: 4,
+                                slidesToScroll: 1
+                            }
+                        },
+                        {
+                            breakpoint: 1008,
+                            settings: {
+                                slidesToShow: 4,
+                                slidesToScroll: 1
+                            }
+                        },
+                        {
+                            breakpoint: 800,
+                            settings: {
+                                slidesToShow: 2,
+                                slidesToScroll: 1
+                            }
+                        }
 
+                    ]
+                });
+                $('.nextpro<?= $i ?>').click(function () {
+                    slide<?= $i ?>.slickNext();
+                })
+                $('.prepro<?= $i ?>').click(function () {
+                    slide<?= $i ?>.slickPrev();
+                })
 
+            </script>
 
-
-            <div class="row" style="margin-bottom: 10px;">
-                <div class="col-md-6">
-                    <div class="mt-3"></div>
-                    <h1 class="header-product">
-                        KỆ GIÁ HÀNG
-                    </h1>
-                </div>
-                <div class="col-md-6">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <img style="position: absolute;right: 15px;margin-top: 15px;"
-                                 src="<?= get_template_directory_uri() . '/assets/images/icon/nextpre.png'; ?>" usemap="#nexprev3">
-                            <map name="nexprev3">
-                                <area href="javascript:void(0)" coords="1,2,32,32" shape="rect" class="nextpro3">
-                                <area href="javascript:void(0)" coords="34,0,66,32" shape="rect" class="prepro3">
-                            </map>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="row" style="margin-bottom: 20px;">
-                <div class="col-md-12">
-                    <div class="product-linebox">
-                        <div class="product-linechild"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="slideproduct3">
-                <div class="row">
-			        <?php for ($i = 0; $i < 2; $i ++): ?>
-				        <?php while ($products->have_posts()) : $products->the_post(); ?>
-					        <?php $thumbnail = get_the_post_thumbnail_url($post->ID, 'product_cate'); ?>
-                            <div class="col-md-3 productitem">
-                                <a href="<?= get_the_permalink() ?>">
-                                    <img style="height: 289px; width: 100%"
-                                         src="<?= $thumbnail ?>" alt="">
-                                    <p class="text-center title-product" style="margin-top: 5px;color: #0463be;">
-								        <?= get_the_title() ?>
-                                    </p>
-                                </a>
-                            </div>
-				        <?php endwhile; wp_reset_postdata(); ?>
-			        <?php endfor; ?>
-                </div>
-                <div class="row">
-			        <?php for ($i = 0; $i < 2; $i ++): ?>
-				        <?php while ($products->have_posts()) : $products->the_post(); ?>
-					        <?php $thumbnail = get_the_post_thumbnail_url($post->ID, 'product_cate'); ?>
-                            <div class="col-md-3 productitem">
-                                <a href="<?= get_the_permalink() ?>">
-                                    <img style="height: 289px; width: 100%"
-                                         src="<?= $thumbnail ?>" alt="">
-                                    <p class="text-center title-product" style="margin-top: 5px;color: #0463be;">
-								        <?= get_the_title() ?>
-                                    </p>
-                                </a>
-                            </div>
-				        <?php endwhile; wp_reset_postdata(); ?>
-			        <?php endfor; ?>
-                </div>
-            </div>
-
-
-
-
-            <div class="row" style="margin-bottom: 10px;">
-                <div class="col-md-6">
-                    <div class="mt-3"></div>
-                    <h1 class="header-product">
-                        THANG - MANG CÁP
-                    </h1>
-                </div>
-                <div class="col-md-6">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <img style="position: absolute;right: 15px;margin-top: 15px;"
-                                 src="<?= get_template_directory_uri() . '/assets/images/icon/nextpre.png'; ?>" usemap="#nexprev4">
-                            <map name="nexprev4">
-                                <area href="javascript:void(0)" coords="1,2,32,32" shape="rect" class="nextpro4">
-                                <area href="javascript:void(0)" coords="34,0,66,32" shape="rect" class="prepro4">
-                            </map>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="row" style="margin-bottom: 20px;">
-                <div class="col-md-12">
-                    <div class="product-linebox">
-                        <div class="product-linechild"></div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="slideproduct4">
-                <div class="row">
-			        <?php for ($i = 0; $i < 2; $i ++): ?>
-				        <?php while ($products->have_posts()) : $products->the_post(); ?>
-					        <?php $thumbnail = get_the_post_thumbnail_url($post->ID, 'product_cate'); ?>
-                            <div class="col-1 col-md-3 productitem">
-                                <a href="<?= get_the_permalink() ?>">
-                                    <img style="height: 289px; width: 100%"
-                                         src="<?= $thumbnail ?>" alt="">
-                                    <p class="text-center title-product" style="margin-top: 5px;color: #0463be;">
-								        <?= get_the_title() ?>
-                                    </p>
-                                </a>
-                            </div>
-				        <?php endwhile; wp_reset_postdata(); ?>
-			        <?php endfor; ?>
-                </div>
-                <div class="row">
-			        <?php for ($i = 0; $i < 2; $i ++): ?>
-				        <?php while ($products->have_posts()) : $products->the_post(); ?>
-					        <?php $thumbnail = get_the_post_thumbnail_url($post->ID, 'product_cate'); ?>
-                            <div class="col-1 col-md-3 productitem">
-                                <a href="<?= get_the_permalink() ?>">
-                                    <img style="height: 289px; width: 100%"
-                                         src="<?= $thumbnail ?>" alt="">
-                                    <p class="text-center title-product" style="margin-top: 5px;color: #0463be;">
-								        <?= get_the_title() ?>
-                                    </p>
-                                </a>
-                            </div>
-				        <?php endwhile; wp_reset_postdata(); ?>
-			        <?php endfor; ?>
-                </div>
-            </div>
-
-
+            <?php endfor; ?>
 
 
         </div>
