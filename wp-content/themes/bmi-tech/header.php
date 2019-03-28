@@ -34,7 +34,9 @@
     <script src="<?= get_template_directory_uri() ?>/assets/js/bootstrap.bundle.min.js"></script>
     <script src="<?= get_template_directory_uri() ?>/assets/js/bootsnav.js"></script>
 
-
+    <?php if (!is_home()): ?>
+        <script src="<?= get_template_directory_uri() ?>/assets/libraries/slick/slick.js"></script>
+    <?php endif; ?>
     <?php wp_head(); ?>
 
     <div id="fb-root"></div>
