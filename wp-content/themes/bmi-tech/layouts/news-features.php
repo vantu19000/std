@@ -45,7 +45,7 @@ $nfpost = new WP_Query($args);
                                 </div>
                                 <div class="col-md-8">
                                     <h6 style="display: inline-flex;">
-                                        <img style="width: 30px; height: 22px; margin-right: 10px;"
+                                        <img style="width: 15px; height: 15px; margin-right: 5px;"
                                              src="<?= get_template_directory_uri() . '/assets/images/icon/tick.png'; ?>">
                                         <?= get_the_title() ?>
                                     </h6>
