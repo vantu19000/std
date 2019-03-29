@@ -100,10 +100,10 @@ $nfpost = new WP_Query($args);
             });
 
             $(".nfnext").click(function () {
-                nfslider.goToNextSlide();
+                $('#news-features').slick('slickNext');
             })
             $(".nfprev").click(function () {
-                nfslider.goToPrevSlide();
+                $('#news-features').slick('slickPrev');
             })
         });
     </script>
