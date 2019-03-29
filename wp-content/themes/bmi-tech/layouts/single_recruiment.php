@@ -24,9 +24,9 @@
         <div class="col-md-8">
             <h1 class="post-title"><?= get_the_title(); ?></h1>
 
-            <?php
-            echo get_the_excerpt();
-            ?>
+            <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+            <?php echo get_the_excerpt(); ?>
+            <?php endwhile; endif; ?>
 
         </div>
     </div>
