@@ -7,6 +7,8 @@ $employee = $config->employee->params->data;
 //echo "</pre>";
 
 ?>
+
+<?php if (is_array($employee)): ?>
 <section class="section our-team">
 	<div class="container">
 		<div class="row">
@@ -21,3 +23,4 @@ $employee = $config->employee->params->data;
 		</div>
 	</div>
 </section>
+<?php endif; ?>

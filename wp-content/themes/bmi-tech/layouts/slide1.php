@@ -9,7 +9,7 @@
 
 <section class="section slider">
     <div class="bxslider">
-        <?php for ($i = 1; $i < 6; $i ++): ?>
+        <?php for ($i = 10; $i < 20; $i ++): ?>
         <div><img src="<?= get_template_directory_uri() . '/assets/images/banner/trangchuslide'.$i.'.jpg' ?>"></div>
         <?php endfor; ?>
     </div>

@@ -2,7 +2,6 @@
 
 <?php require 'layouts/slide1.php' ?>
 
-
 <section class="section ourservice">
     <div class="container">
         <div class="row">
@@ -50,9 +49,7 @@
     </div>
 </section>
 
-
 <?php require 'layouts/news.php' ?>
-
 
 <section class="categories">
 
@@ -111,28 +108,19 @@
 
 </section>
 
-
-
 <div class="mt-5"></div>
 
-
-
-<?php
-require 'layouts/technology.php';
-?>
-
+<?php require 'layouts/technology.php';  ?>
 
 <div class="mt-5"></div>
 
 <?php require 'layouts/news-features.php'; ?>
-
 
 <section class="section body-banner">
     <div>
         <img src="http://www.sonspost.com.vn/upload/oto/media//1464513603_banner2.jpg" style="width: 100%">
     </div>
 </section>
-
 
 <?php require 'layouts/employee.php'; ?>
 
