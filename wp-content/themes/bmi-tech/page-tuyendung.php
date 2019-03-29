@@ -1,6 +1,9 @@
-<?php/*
-Template name: Trang tuyển dụng
-*/?>
+<?php
+/*
+Template name: Trang tuyển dụng.
+*/
+exit;
+?>
 <?php get_header(); ?>
 
 <div class="container" style="padding-left: 0px;padding-right: 0; margin-top: 20px;">
