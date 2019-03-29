@@ -70,7 +70,7 @@ function bmi_video() {
 		array(
 			'labels' => array(
 				'name' => __( 'Videos' ),
-				'singular_name' => __( 'Tuyển dụng' )
+				'singular_name' => __( 'Video' )
 			),
 			'menu_icon' => 'dashicons-format-video',
 			'menu_position' => 4,
