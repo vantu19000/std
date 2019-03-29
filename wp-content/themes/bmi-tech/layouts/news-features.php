@@ -91,7 +91,7 @@ $nfpost = new WP_Query($args);
                     {
                         breakpoint: 800,
                         settings: {
-                            slidesToShow: 2,
+                            slidesToShow: 1,
                             slidesToScroll: 1
                         }
                     }
