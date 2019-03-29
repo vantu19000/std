@@ -31,16 +31,15 @@ $tech = new WP_Query($args);
 
         <div class="paintTextSlider">
 
-            <div class="row tectItembxslider">
 
-                <div class="painTextSliderItem">
+            <div class="painTextSliderItem">
 
 
-                    <?php for ($i = 0; $i < 1; $i ++): ?>
+                <?php for ($i = 0; $i < 1; $i++): ?>
                     <?php while ($tech->have_posts()) : $tech->the_post(); ?>
                         <?php $img = 'http://cafefcdn.com/thumb_w/650/Images/Uploaded/Share/2012/05/26/son-tinh-dien.jpg'; ?>
 
-<!--                        <div>-->
+                        <div class="row">
                             <div class="col-md-12">
                                 <div class="row"
                                      style="margin-bottom: 20px;background-image: url('<?= $img ?>');">
@@ -57,12 +56,10 @@ $tech = new WP_Query($args);
                                     </div>
                                 </div>
                             </div>
-<!--                        </div>-->
+                        </div>
                     <?php endwhile;
-                    endfor;
-                    wp_reset_query(); ?>
-
-                </div>
+                endfor;
+                wp_reset_query(); ?>
 
             </div>
 
@@ -70,43 +67,45 @@ $tech = new WP_Query($args);
 
 
         <script>
-            $('.painTextSliderItem').slick({
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                arrows: false,
-                autoplay: false,
-                responsive: [
-                    {
-                        breakpoint: 1200,
-                        settings: {
-                            slidesToShow: 3,
-                            slidesToScroll: 1
+            $(document).ready(function () {
+                $('.painTextSliderItem').slick({
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    autoplay: false,
+                    responsive: [
+                        {
+                            breakpoint: 1200,
+                            settings: {
+                                slidesToShow: 3,
+                                slidesToScroll: 1
+                            }
+                        },
+                        {
+                            breakpoint: 1008,
+                            settings: {
+                                slidesToShow: 3,
+                                slidesToScroll: 1
+                            }
+                        },
+                        {
+                            breakpoint: 800,
+                            settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1
+                            }
                         }
-                    },
-                    {
-                        breakpoint: 1008,
-                        settings: {
-                            slidesToShow: 3,
-                            slidesToScroll: 1
-                        }
-                    },
-                    {
-                        breakpoint: 800,
-                        settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1
-                        }
-                    }
 
-                ]
+                    ]
+                });
+                $('#technoSliderNext').click(function () {
+                    $('.painTextSliderItem').slick('slickNext');
+                })
+                $('#technoSliderPrev').click(function () {
+                    $('.painTextSliderItem').slick('slickPrev');
+                })
+
             });
-            $('#technoSliderNext').click(function () {
-                $('.painTextSliderItem').slick('slickNext');
-            })
-            $('#technoSliderPrev').click(function () {
-                $('.painTextSliderItem').slick('slickPrev');
-            })
-
         </script>
 
 
@@ -115,6 +114,7 @@ $tech = new WP_Query($args);
         .paintTextSlider {
             /*transform: translate3d(0px, 0px, 0px) !important;*/
         }
+
         .paintTextSlider .slick-slide {
             margin: 20px 10px 0 0;
         }
