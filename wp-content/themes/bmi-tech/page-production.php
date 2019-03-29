@@ -157,6 +157,9 @@ $products = new WP_Query($args);
         font-weight: bold;
         text-underline: none;
     }
+    .slick-slide {
+        margin: 20px 10px 0 0;
+    }
 </style>
 
 
