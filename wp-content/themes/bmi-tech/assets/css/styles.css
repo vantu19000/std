@@ -707,13 +707,13 @@ hr {
     /*margin: 0 -10px;*/
 }
 
-@media screen and (min-height: 764px) {
+@media screen and (min-width: 764px) {
     .imgnexpre {
         position: absolute;right: 15px;margin-top: 15px;
     }
 }
 
-@media screen and (max-height: 764px) {
+@media screen and (max-width: 764px) {
     .imgnexpre {
         position: absolute;right: 15px;margin-top: -35px;
     }
