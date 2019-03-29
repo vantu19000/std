@@ -49,7 +49,7 @@ $nfpost = new WP_Query($args);
                                              src="<?= get_template_directory_uri() . '/assets/images/icon/tick.png'; ?>">
                                         <?= get_the_title() ?>
                                     </h6>
-                                    <p><?= substr(get_the_excerpt(), 0, 100) ?></p>
+                                    <p><?= substr(get_the_excerpt(), 0, 200) ?></p>
                                     <p><a href="<?= get_the_permalink() ?>">Xem thêm</a></p>
                                 </div>
                             </div>

@@ -118,7 +118,7 @@
 
 <section class="section body-banner">
     <div>
-        <img src="http://www.sonspost.com.vn/upload/oto/media//1464513603_banner2.jpg" style="width: 100%">
+        <img src="http://www.sonspost.com.vn/upload/oto/media/1464513603_banner2.jpg" style="width: 100%">
     </div>
 </section>
 
