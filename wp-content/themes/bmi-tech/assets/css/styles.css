@@ -62,16 +62,12 @@ img{
     padding-bottom: 20px;
 }
 
-#hex3 {
-    width: 150px;
-    height: 150px;
-}
 #color3 {
     background-color: transparent;
 }
 .hexagon-wrapper {
     text-align: center;
-    margin: 20px;
+    margin: 10px;
     position: relative;
     display: inline-block;
 }
@@ -115,7 +111,36 @@ img{
     margin-left: auto;
     margin-right: auto;
     width: 65px;
-    margin-top: 35px;
+}
+
+@media only screen and (min-width: 728px) {
+    #hex3 {
+        width: 150px;
+        height: 150px;
+    }
+    .hexagon-wrapper img {
+        margin-top: 35px;
+    }
+    .ourservice .ser-text{
+        font-family: SanFranciscoDisplayBold;
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+@media only screen and (max-width: 727px) {
+    #hex3 {
+        width: 100px;
+        height: 100px;
+    }
+    .hexagon-wrapper img {
+        margin-top: 20px;
+    }
+    .ourservice .ser-text{
+        /*text-align: justify;*/
+        font-family: SanFranciscoDisplayRegular;
+        width: 80%;
+        margin: 0 auto;
+    }
 }
 
 .categories .category-items{
@@ -439,12 +464,6 @@ section.slider{
 .ourservice .ser-text p{
     /*text-align: justify;*/
 
-}
-.ourservice .ser-text{
-    /*text-align: justify;*/
-    font-family: SanFranciscoDisplayBold;
-    width: 80%;
-    margin: 0 auto;
 }
 
 .post-title {
