@@ -13,12 +13,19 @@ $features = new WP_Query($args);
             slidesToShow: 1,
             slidesToScroll: 1,
             arrows: false,
-            // autoplay: true,
+            autoplay: true,
             // infinite: true,
             // cssEase: 'linear',
             // variableWidth: true,
             // variableHeight: true
         });
+        $("#newSliderPrev").click(function () {
+            $('.newslider').slick('slickPrev');
+        })
+        $("#newSliderNext").click(function () {
+            $('.newslider').slick('slickNext');
+        })
+
     });
 
 </script>
