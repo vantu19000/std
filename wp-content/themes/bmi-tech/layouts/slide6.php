@@ -1,7 +1,7 @@
 <div class="container" style="margin-top: 30px;">
 	<div class="row">
 		<div class="col-md-8">
-			<img style="height: 350px;width: 100%"
+			<img class="imageduan"
                     src="<?= get_template_directory_uri() . '/assets/images/banner/duan1.jpg' ?>" alt="">
 		</div>
 		<div class="col-md-4">

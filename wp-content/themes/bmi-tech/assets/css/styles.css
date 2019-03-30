@@ -727,10 +727,24 @@ hr {
     .imgnexpre {
         position: absolute;right: 15px;margin-top: 15px;
     }
+    .imageduan{
+        height: 350px;width: 100%
+    }
+    .imagesingleduan{
+        height: 400px; width: 100%
+    }
 }
 
 @media screen and (max-width: 764px) {
     .imgnexpre {
         position: absolute;right: 15px;margin-top: -35px;
+    }
+    .imageduan{
+        height: auto;
+        width: 100%
+    }
+    .imagesingleduan{
+        height: auto;
+        width: 100%
     }
 }
