@@ -85,22 +85,11 @@ $categories = get_terms( array(
 			</div>
 
 			<div class="row">
-				<?php if (!wp_is_mobile()): ?>
-                <div class="col-2 col-md-2">
-					<div class="color-large"></div>
-				</div>
-				<div class="col-10 col-md-10 align-middle">
-					<span class="color-large-title" id="color_title">
-                        <?= $categories[0]->name ?>
-                    </span>
-				</div>
-                <?php else: ?>
                 <div class="col-md-12 text-center">
                     <span class="color-large-title" id="color_title">
                         <?= $categories[0]->name ?>
                     </span>
                 </div>
-                <?php endif; ?>
 			</div>
 
             <script>
