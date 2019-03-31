@@ -2,7 +2,7 @@
 
 <?php require 'layouts/slide1.php' ?>
 
-<section class="section ourservice">
+<section class="section ourservice" style="margin-top: 20px;">
     <div class="container">
         <div class="row">
             <?php for ($i = 0; $i < 4; $i ++ ): ?>
@@ -12,7 +12,7 @@
                 switch ($i){
                     case 1:
                         $img = get_template_directory_uri() . '/assets/images/icon/machine1.png';
-	                    $text = 'Đem lại sự thỏa mãn cho khách hàng';
+	                    $text = 'Đem lại sự hài lòng cho khách hàng';
                         break;
 	                case 2:
 		                $img = get_template_directory_uri() . '/assets/images/icon/machine2.png';
@@ -24,7 +24,7 @@
 		                break;
                 }
                 ?>
-            <div class="col-md-3 text-center">
+            <div class="col-6 col-md-3 text-center">
                 <div id="hex3" class="hexagon-wrapper">
                     <div id="color3" class="hexagon text-center align-middle">
                         <img src="<?= $img ?>">
