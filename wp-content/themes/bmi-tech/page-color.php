@@ -35,7 +35,7 @@ $categories = get_terms( array(
 					switch ($i){
 						case 1:
 							$img = get_template_directory_uri() . '/assets/images/icon/machine1.png';
-							$text = 'Đem lại sự thỏa mãn cho khách hàng đó cũng là niềm mong đợi lớn nhất của chúng tôi';
+							$text = 'Đem lại sự thỏa mãn cho khách hàng';
 							break;
 						case 2:
 							$img = get_template_directory_uri() . '/assets/images/icon/machine2.png';
