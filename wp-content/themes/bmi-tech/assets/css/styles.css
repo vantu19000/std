@@ -611,7 +611,7 @@ hr {
 }
 
 .post-title {
-    margin-top: 0px;
+    margin-top: 10px;
 }
 @media only screen and (max-width: 728px) {
     #news-features h6{

@@ -13,6 +13,14 @@ $args = array(
 $news = new WP_Query($args);
 ?>
 
+    <style>
+        <?php if (wp_is_mobile()): ?>
+        h6{
+            margin-top: 10px;
+        }
+        <?php endif; ?>
+    </style>
+
 <?php require 'layouts/slide5.php'; ?>
 
     <div class="container">
