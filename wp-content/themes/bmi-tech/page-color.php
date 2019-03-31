@@ -31,18 +31,18 @@ $categories = get_terms( array(
 				<?php for ($i = 0; $i < 4; $i ++ ): ?>
 					<?php
 					$img = get_template_directory_uri() . '/assets/images/icon/setting.png';
-					$text = 'Tư vấn lắp đặt các loại dây chuyền sơn tĩnh điện tự động và bán tự động';
+					$text = 'Dịch vụ uy tín';
 					switch ($i){
 						case 1:
 							$img = get_template_directory_uri() . '/assets/images/icon/machine1.png';
-							$text = 'Cung cấp súng phun sơn tĩnh điện các hãng: ITWGema, Nordson, Wagner';
+							$text = 'Đem lại sự thỏa mãn cho khách hàng đó cũng là niềm mong đợi lớn nhất của chúng tôi';
 							break;
 						case 2:
 							$img = get_template_directory_uri() . '/assets/images/icon/machine2.png';
-							$text = 'Sản xuất, mua bán máy móc, dây chuyền đồng bộ phục vụ ngành công nghiệp';
+							$text = 'Giá cả hợp lý';
 							break;
 						case 3:
-							$text = "Sản xuất, mua bán các loại sơn, hoá chất";
+							$text = "Giao hàng 24h";
 							$img = get_template_directory_uri() . '/assets/images/icon/machine3.png';
 							break;
 					}
