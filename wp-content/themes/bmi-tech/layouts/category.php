@@ -12,21 +12,23 @@ $categories = get_terms( array(
 
 //$args = array(
 //	'post_type' => 'bmi_product',
+//	'post_per_page' => 6,
 //	'tax_query' => array(
 //		array(
 //			'field' => 'term_id',
-//			'terms' => 5
+//			'terms' => 5,
 //			'taxonomy' => 'product_category',
 //		)
 //	)
 //);
 //$query = new WP_Query( $args );
 //echo "<pre>";
-//foreach ($query AS $val){
-//	print_r($val->ID);
+//if ($query->have_posts()){
+//	while ( $query->have_posts() ) : $query->the_post();
+//		print_r(the_title());
+//	endwhile;
 //}
 //wp_reset_query();
-
 //exit;
 
 ?>
