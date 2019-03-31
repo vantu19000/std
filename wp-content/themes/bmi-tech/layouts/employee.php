@@ -9,7 +9,7 @@ $employee = $config->employee->params->data;
 ?>
 
 <?php if (is_array($employee)): ?>
-<section class="section our-team">
+<section class="section our-team" style="margin-top: 30px;">
 	<div class="container">
 		<div class="row">
 			<?php for ($i = 0; $i < count($employee); $i ++): ?>

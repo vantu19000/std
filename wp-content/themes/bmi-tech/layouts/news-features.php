@@ -5,7 +5,14 @@ $args = array(
 );
 $nfpost = new WP_Query($args);
 ?>
-
+<style>
+    .feature-news .slick-slider {
+        /*margin:0 -15px;*/
+    }
+    .feature-news .slick-slide {
+        margin-right:15px;
+    }
+</style>
 <section class="section feature-news">
 
     <div class="container">
@@ -30,11 +37,10 @@ $nfpost = new WP_Query($args);
         </div>
 
 
-        <div id="news-features" style="border: none;">
+        <div id="news-features" class="news-features" style="border: none;">
 
             <?php while ($nfpost->have_posts()) : $nfpost->the_post(); ?>
                 <div>
-
                     <div class="row">
 
                         <div class="col-md-12">
@@ -43,7 +49,7 @@ $nfpost = new WP_Query($args);
                                     <img src="https://satmythuathd.files.wordpress.com/2015/08/loi-son-tinh-dien.jpg"
                                          style="width: 100%">
                                 </div>
-                                <div class="col-md-8">
+                                <div class="col-md-8" style="padding-left: 0;">
                                     <h6 style="display: inline-flex;">
                                         <img style="width: 15px; height: 15px; margin-right: 5px;"
                                              src="<?= get_template_directory_uri() . '/assets/images/icon/tick.png'; ?>">
@@ -62,14 +68,45 @@ $nfpost = new WP_Query($args);
 
         </div>
 
+        <div id="news-features" class="news-features" style="border: none;">
+
+		    <?php while ($nfpost->have_posts()) : $nfpost->the_post(); ?>
+                <div>
+                    <div class="row">
+
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img src="https://satmythuathd.files.wordpress.com/2015/08/loi-son-tinh-dien.jpg"
+                                         style="width: 100%">
+                                </div>
+                                <div class="col-md-8" style="padding-left: 0;">
+                                    <h6 style="display: inline-flex;">
+                                        <img style="width: 15px; height: 15px; margin-right: 5px;"
+                                             src="<?= get_template_directory_uri() . '/assets/images/icon/tick.png'; ?>">
+									    <?= get_the_title() ?>
+                                    </h6>
+                                    <p><?= get_the_excerpt(); ?></p>
+                                    <p><a href="<?= get_the_permalink() ?>">Xem thêm</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+		    <?php endwhile;
+		    wp_reset_query() ?>
+
+        </div>
+
 
     </div>
 
     <script>
         $(document).ready(function () {
 
-            $('#news-features').slick({
-                slidesToShow: 3,
+            $('.news-features').slick({
+                slidesToShow: 2,
                 slidesToScroll: 1,
                 arrows: false,
                 autoplay: false,
@@ -77,14 +114,14 @@ $nfpost = new WP_Query($args);
                     {
                         breakpoint: 1200,
                         settings: {
-                            slidesToShow: 3,
+                            slidesToShow: 2,
                             slidesToScroll: 1
                         }
                     },
                     {
                         breakpoint: 1008,
                         settings: {
-                            slidesToShow: 3,
+                            slidesToShow: 2,
                             slidesToScroll: 1
                         }
                     },

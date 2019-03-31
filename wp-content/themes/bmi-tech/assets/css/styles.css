@@ -121,6 +121,10 @@ img{
     .hexagon-wrapper img {
         margin-top: 35px;
     }
+    .ourservice{
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
     .ourservice .ser-text{
         font-family: SanFranciscoDisplayBold;
         width: 80%;
@@ -225,7 +229,7 @@ img{
 }
 .categories .albumCate img{
     width: 100%;
-    max-height: 200px;
+    max-height: 166px;
     margin-bottom: 25px;
 }
 .categories .categoryBox {

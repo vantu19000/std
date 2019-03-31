@@ -36,13 +36,13 @@ $primaryNav = wp_get_nav_menu_items($menuID);
 
         <?php if (!wp_is_mobile()): ?>
             <div class="row" style="width: 100%; padding-top: 20px;">
-                <div class="col-md-3 <?php if (!wp_is_mobile() && 1 == 2) echo 'text-center' ?>">
+                <div class="col-md-2 <?php if (!wp_is_mobile() && 1 == 2) echo 'text-center' ?>">
                     <a class="navbar-brand js-scroll-trigger navbar-left" href="<?= get_site_url() ?>">
                         <img src="<?= get_template_directory_uri() . '/assets/images/logo.png' ?>"
                              style="width: 80px;margin-top: -15px;"/>
                     </a>
                 </div>
-                <div class="col-md-9" style="position:relative;">
+                <div class="col-md-10" style="position:relative;">
                     <button id="mobileToog" class="navbar-toggler collapsed menu-mobile" type="button"
                             data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
                             aria-expanded="false" aria-label="Toggle navigation">

@@ -41,7 +41,7 @@
 
         <div class="mt-2"></div>
 
-        <div class="row">
+        <div class="row" style="margin-top: 20px;">
             <div class="col-md-6 offset-md-3">
                 <h4 class="title">DỊCH VỤ CỦA CHÚNG TÔI</h4>
             </div>
@@ -63,7 +63,7 @@
 
 <section class="section body-banner">
     <div>
-        <img src="http://www.sonspost.com.vn/upload/oto/media/1464513603_banner2.jpg" style="width: 100%">
+        <img src="<?= get_template_directory_uri() ?>/assets/images/banner/bannerindex.jpg" style="width: 100%">
     </div>
 </section>
 
