@@ -13,7 +13,13 @@ $args = array(
 $projects = new WP_Query( $args );
 ?>
 
+<?php if (!wp_is_mobile()): ?>
+
 <?php require 'layouts/slide6.php'; ?>
+
+<?php else: ?>
+	<?php require 'layouts/slide9.php'; ?>
+<?php endif; ?>
 
     <div class="container">
 
@@ -60,10 +66,7 @@ $projects = new WP_Query( $args );
 			<?php endwhile;
 			wp_reset_postdata(); ?>
 
-
         </div>
-
-
     </div>
 
 
