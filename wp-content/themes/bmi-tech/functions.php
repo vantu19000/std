@@ -126,3 +126,5 @@ require 'inc/form-shortcode.php';
 require 'inc/shortcode.php';
 require 'inc/menu.php';
 require 'inc/custom-field.php';
+require 'inc/custom-column.php';
+require 'inc/ajax.php';
