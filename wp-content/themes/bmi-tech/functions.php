@@ -12,6 +12,7 @@ if ( ! function_exists( 'bmi_setup' ) ) :
 		add_image_size('leftRencentPost', 350, 234);
 		add_image_size('product_cate', 160, 289);
 		add_image_size('news_thumb', 223, 185);
+		add_image_size('product_thumb', 223, 167);
 		register_nav_menus( array(
 			'menu-primary' => esc_html__( 'Primary Menu', 'bmi' ),
 		) );

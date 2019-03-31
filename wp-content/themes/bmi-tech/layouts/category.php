@@ -9,6 +9,26 @@ $categories = get_terms( array(
 //print_r($categories);
 //exit;
 
+
+//$args = array(
+//	'post_type' => 'bmi_product',
+//	'tax_query' => array(
+//		array(
+//			'field' => 'term_id',
+//			'terms' => 5
+//			'taxonomy' => 'product_category',
+//		)
+//	)
+//);
+//$query = new WP_Query( $args );
+//echo "<pre>";
+//foreach ($query AS $val){
+//	print_r($val->ID);
+//}
+//wp_reset_query();
+
+//exit;
+
 ?>
 
 <section class="categories">
@@ -44,25 +64,34 @@ $categories = get_terms( array(
 
                 <div class="row" style="margin-top: 10px">
                     <div class="col-4 col-md-4">
-                        <img src="https://giaphu.com.vn/wp-content/uploads/2018/05/he-thong-day-chuyen-son-tinh-dien.jpg"/>
+                        <a href="#">
+                            <img src="https://giaphu.com.vn/wp-content/uploads/2018/05/he-thong-day-chuyen-son-tinh-dien.jpg"/>
+                        </a>
                     </div>
                     <div class="col-4 col-md-4">
-                        <img src="https://giaphu.com.vn/wp-content/uploads/2018/05/he-thong-day-chuyen-son-tinh-dien.jpg"/>
+                        <a href="#">
+                            <img src="https://giaphu.com.vn/wp-content/uploads/2018/05/he-thong-day-chuyen-son-tinh-dien.jpg"/>
+                        </a>
                     </div>
                     <div class="col-4 col-md-4">
-                        <img src="https://giaphu.com.vn/wp-content/uploads/2018/05/he-thong-day-chuyen-son-tinh-dien.jpg"/>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-4 col-md-4">
-                        <img src="https://giaphu.com.vn/wp-content/uploads/2018/05/he-thong-day-chuyen-son-tinh-dien.jpg"/>
+                        <a href="#">
+                            <img src="https://giaphu.com.vn/wp-content/uploads/2018/05/he-thong-day-chuyen-son-tinh-dien.jpg"/>
+                        </a>
                     </div>
                     <div class="col-4 col-md-4">
-                        <img src="https://giaphu.com.vn/wp-content/uploads/2018/05/he-thong-day-chuyen-son-tinh-dien.jpg"/>
+                        <a href="#">
+                            <img src="https://giaphu.com.vn/wp-content/uploads/2018/05/he-thong-day-chuyen-son-tinh-dien.jpg"/>
+                        </a>
                     </div>
                     <div class="col-4 col-md-4">
-                        <img src="https://giaphu.com.vn/wp-content/uploads/2018/05/he-thong-day-chuyen-son-tinh-dien.jpg"/>
+                        <a href="#">
+                            <img src="https://giaphu.com.vn/wp-content/uploads/2018/05/he-thong-day-chuyen-son-tinh-dien.jpg"/>
+                        </a>
+                    </div>
+                    <div class="col-4 col-md-4">
+                        <a href="#">
+                            <img src="https://giaphu.com.vn/wp-content/uploads/2018/05/he-thong-day-chuyen-son-tinh-dien.jpg"/>
+                        </a>
                     </div>
                 </div>
 
@@ -77,7 +106,11 @@ $categories = get_terms( array(
         $(document).ready(function () {
             var term_id = 1;
 
-            loadProduct(term_id);
+            loadProduct($( ".classic" ).first().val());
+
+            $(".classic").change(function () {
+                loadProduct($(this).val());
+            })
 
         })
     })(jQuery)
@@ -95,10 +128,15 @@ $categories = get_terms( array(
             beforeSend: function () {
             },
             success: function (response) {
-                if (response.success) {
-                    alert(response);
+
+                console.log(response);
+                // return;
+
+
+                if (response.status == 1) {
+                    $(".albumCate").html(response.data);
                 } else {
-                    alert('Đã có lỗi xảy ra');
+                    console.log("error while loading product")
                 }
             },
             error: function (jqXHR, textStatus, errorThrown) {
