@@ -13,6 +13,23 @@ $categories = get_terms( array(
 ));
 ?>
 
+    <style>
+        h3{
+            font-size: 25px;
+        }
+        .slash{
+            position: absolute;
+            background: white;
+            width: 7px;
+            height: 65px;
+            margin-top: -15px;
+            margin-left: -5px;
+            /*left: 38%;*/
+            -ms-transform: rotate(20deg); /* IE 9 */
+            -webkit-transform: rotate(20deg); /* Safari 3-8 */
+            transform: rotate(20deg);
+        }
+    </style>
 <div class="container">
 	<div class="row color-header">
 		<div class="col-md-4">
@@ -20,11 +37,16 @@ $categories = get_terms( array(
 		</div>
 
 		<div class="col-md-8">
-			<h3 class="text-center">DANH MỤC BẢNG MÀU SƠN TĨNH ĐIỆN</h3>
+            <?php if (!wp_is_mobile()): ?>
+            <div class="slash"></div>
+            <?php endif; ?>
+
+            <h3 class="text-center">DANH MỤC BẢNG MÀU SƠN TĨNH ĐIỆN</h3>
 		</div>
 
-	</div>
-	<div class="row">
+    </div>
+
+    <div class="row">
 		<div class="col-md-4" style="background: #E3EDF6">
 
 			<div class="row ourservice">

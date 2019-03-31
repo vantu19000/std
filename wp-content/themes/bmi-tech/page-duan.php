@@ -57,9 +57,9 @@ $projects = new WP_Query( $args );
 
                 <div class="col <?= $class ?>">
                     <a href="<?= get_the_permalink() ?>">
-                        <img style="max-height: 200px;"
+                        <img style="max-height: 200px;min-height: 149px;"
                              src="<?= get_the_post_thumbnail_url() ?>" alt="">
-                        <h6 class="text-center company-duan-title"><?= get_the_title() ?></h6>
+                        <h6 class="text-center company-duan-title" style="color: #000;"><?= get_the_title() ?></h6>
                     </a>
                 </div>
 
@@ -67,6 +67,31 @@ $projects = new WP_Query( $args );
 			wp_reset_postdata(); ?>
 
         </div>
+
+        <div class="row" style="margin-top: 20px;margin-bottom: 20px;">
+
+		    <?php
+		    $class = '';
+		    if ( wp_is_mobile() ) {
+			    $class = 'col-6';
+		    }
+		    ?>
+
+		    <?php while ( $projects->have_posts() ) : $projects->the_post(); ?>
+
+                <div class="col <?= $class ?>">
+                    <a href="<?= get_the_permalink() ?>">
+                        <img style="max-height: 200px;min-height: 149px;"
+                             src="<?= get_the_post_thumbnail_url() ?>" alt="">
+                        <h6 class="text-center company-duan-title" style="color: #000;"><?= get_the_title() ?></h6>
+                    </a>
+                </div>
+
+		    <?php endwhile;
+		    wp_reset_postdata(); ?>
+
+        </div>
+
     </div>
 
 

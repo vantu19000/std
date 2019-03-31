@@ -49,7 +49,7 @@ $general = $config->general->params;
 
             <div class="col-md-4 footer-info">
                 <ul class="footer-list product-list">
-                    <li><a href="#">Danh mục sản phẩm</a></li>
+                    <li><a href="javascript:void(0)">Danh mục sản phẩm</a></li>
                     <li><a href="#">Cửa cổng</a></li>
                     <li><a href="#">Vỏ tủ điện</a></li>
                     <li><a href="#">Kệ giá hàng</a></li>
@@ -60,14 +60,12 @@ $general = $config->general->params;
 
             <div class="col-md-4 footer-info">
                 <div class="company-information">
-                    <h6>CÔNG TY SƠN BÌNH MINH</h6>
+                    <h6>Công ty cổ phần công nghệ cao HP Việt Nam</h6>
 
                     <ul>
-                        <li>ADD: số 26, ngõ 77, Lãng Yên, phường Thanh Lương, Hai Bà Trưng, Hà Nội</li>
-                        <li>ADD: Xưởng sản xuất: Đường vào trại giam số 2, Văn Bình, Thường Tín, Hà Nội</li>
-                        <li>Website: sonbinhminh.vn</li>
-                        <li>Mail: sonbinhminh@gmail.com</li>
-                        <li>TEl: 043.3234.303</li>
+                        <li>ADD: Thôn An Lạc, xã Trưng Trắc, huyện Văn Lâm, Hưng Yên</li>
+                        <li>Website: sontinhdiencongnghiep.com</li>
+                        <li>TEl: 0968 30 04 85</li>
                     </ul>
                 </div>
             </div>

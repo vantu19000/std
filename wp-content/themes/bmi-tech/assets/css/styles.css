@@ -242,6 +242,12 @@ img{
     font-family: SanFranciscoDisplayBold;
 }
 
+@media only screen and (max-width: 728px) {
+    .paint-text {
+
+    }
+}
+
 .paint-text .techno-left h6 {
     font-family: SanFranciscoDisplayBold;
     text-align: justify;
@@ -506,8 +512,7 @@ section.slider{
 
 .color-header {
     background: #0463be;
-    padding: 20px;
-    font-size: 25px;
+    padding: 10px 0 5px 0;
     color: #fff;
     font-family: SanFranciscoDisplayBold;
     /*background: url("../images/bg/color-board.png");*/
@@ -566,7 +571,8 @@ section.slider{
     margin: 10px;
     font-family: SanFranciscoDisplayBold;
     text-transform: uppercase;
-    color: #0463be !important;
+    /*color: #0463be !important;*/
+    font-weight: bold;
 }
 
 .video-title {

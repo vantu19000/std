@@ -31,13 +31,13 @@ $news = new WP_Query($args);
 
                 <?php for ($i = 0; $i < 2; $i ++): ?>
                 <div class="row paint-text" style="margin-left: 0px;margin-bottom: 20px;">
-                    <div class="col-md-8 techno-left">
+                    <div class="col-8 col-md-8 techno-left">
                         <p class="month">Tháng 5</p>
                         <h6>Công nghệ sơn tĩnh điện phương pháp bảo vệ kim loại tối ưu</h6>
                         <p>Công nghệ sơn tĩnh điện phương điện phương pháp bảo vệ kim loại tối ưu</p>
                         <p><a href="#">Xem thêm >> </a></p>
                     </div>
-                    <div class="col-md-4" style="margin-left: -15px;">
+                    <div class="col-4 col-md-4" style="margin-left: -15px;">
                         <div class="techno-right" style="background-image: url('https://satmythuathd.files.wordpress.com/2015/08/loi-son-tinh-dien.jpg');"></div>
                     </div>
                 </div>
