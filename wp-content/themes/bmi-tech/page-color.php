@@ -49,7 +49,7 @@ $categories = get_terms(array(
         </div>
 
         <div class="row">
-            <div class="col-6 col-md-4" style="background: #E3EDF6">
+            <div class="col-md-4" style="background: #E3EDF6">
 
                 <div class="row ourservice">
                     <?php for ($i = 0; $i < 4; $i++): ?>
@@ -71,7 +71,7 @@ $categories = get_terms(array(
                                 break;
                         }
                         ?>
-                        <div class="col-md-12 text-center">
+                        <div class="col-6 col-md-12 text-center">
                             <div id="hex3" class="hexagon-wrapper">
                                 <div id="color3" class="hexagon text-center align-middle">
                                     <img src="<?= $img ?>">
