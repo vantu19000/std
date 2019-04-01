@@ -31,6 +31,13 @@
 	</tr>
 
 	<tr>
+		<th scope="row"><label for="twitter_url">Youtube</label></th>
+		<td>
+			<input name="data[params][youtube]" type="text" id="youtube" value="<?= $data->params->youtube ?>" class="regular-text" placeholder="Link youtube">
+		</td>
+	</tr>
+
+	<tr>
 		<th scope="row"><label for="instagram_url">Instagram</label></th>
 		<td>
 			<input name="data[params][instagram_url]" type="text" id="instagram_url" value="<?= $data->params->instagram_url ?>" class="regular-text" placeholder="Link instagram">

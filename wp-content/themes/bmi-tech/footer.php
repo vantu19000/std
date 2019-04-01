@@ -65,7 +65,8 @@ $general = $config->general->params;
                     <ul>
                         <li>ADD: Thôn An Lạc, xã Trưng Trắc, huyện Văn Lâm, Hưng Yên</li>
                         <li>Website: sontinhdiencongnghiep.com</li>
-                        <li>TEl: 0968 30 04 85</li>
+                        <li onclick="window.open('tel:0968300485')">TEl: 0968 30 04 85</li>
+                        <li onclick="window.open('tel:0934123128')">TEl: 0934 123 128</li>
                     </ul>
                 </div>
             </div>
