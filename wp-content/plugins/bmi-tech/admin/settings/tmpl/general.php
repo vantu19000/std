@@ -31,7 +31,7 @@
 	</tr>
 
 	<tr>
-		<th scope="row"><label for="twitter_url">Youtube</label></th>
+		<th scope="row"><label for="youtube">Youtube</label></th>
 		<td>
 			<input name="data[params][youtube]" type="text" id="youtube" value="<?= $data->params->youtube ?>" class="regular-text" placeholder="Link youtube">
 		</td>
@@ -59,6 +59,34 @@
 		</td>
 	</tr>
 
+
+    <tr>
+        <th scope="row"><label for="criteria_1">Tiêu chí 1</label></th>
+        <td>
+            <input name="data[params][criteria_1]" type="text" id="criteria_1" value="<?= $data->params->criteria_1 ?>" class="regular-text">
+        </td>
+    </tr>
+
+    <tr>
+        <th scope="row"><label for="criteria_2">Tiêu chí 2</label></th>
+        <td>
+            <input name="data[params][criteria_2]" type="text" id="criteria_2" value="<?= $data->params->criteria_2 ?>" class="regular-text">
+        </td>
+    </tr>
+
+    <tr>
+        <th scope="row"><label for="criteria_3">Tiêu chí 3</label></th>
+        <td>
+            <input name="data[params][criteria_3]" type="text" id="criteria_3" value="<?= $data->params->criteria_3 ?>" class="regular-text">
+        </td>
+    </tr>
+
+    <tr>
+        <th scope="row"><label for="criteria_4">Tiêu chí 4</label></th>
+        <td>
+            <input name="data[params][criteria_4]" type="text" id="criteria_4" value="<?= $data->params->criteria_4 ?>" class="regular-text">
+        </td>
+    </tr>
 
 	</tbody>
 </table>

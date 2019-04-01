@@ -2,24 +2,29 @@
 
 <?php require 'layouts/slide1.php' ?>
 
+<?php
+global $config;
+$general = $config->general->params;
+?>
+
 <section class="section ourservice" style="margin-top: 20px;">
     <div class="container">
         <div class="row">
             <?php for ($i = 0; $i < 4; $i ++ ): ?>
             <?php
                 $img = get_template_directory_uri() . '/assets/images/icon/setting.png';
-                $text = 'Dịch vụ uy tín';
+                $text = $general->criteria_1;
                 switch ($i){
                     case 1:
                         $img = get_template_directory_uri() . '/assets/images/icon/machine1.png';
-	                    $text = 'Đem lại sự hài lòng cho khách hàng';
+	                    $text = $general->criteria_2;
                         break;
 	                case 2:
 		                $img = get_template_directory_uri() . '/assets/images/icon/machine2.png';
-		                $text = 'Giá cả hợp lý';
+		                $text = $general->criteria_3;
 		                break;
 	                case 3:
-		                $text = "Giao hàng 24h";
+		                $text = $general->criteria_4;
 		                $img = get_template_directory_uri() . '/assets/images/icon/machine3.png';
 		                break;
                 }
