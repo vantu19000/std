@@ -68,8 +68,8 @@ $nfpost = new WP_Query($args);
 
         </div>
 
+        <?php if (!wp_is_mobile()): ?>
         <div id="news-features" class="news-features" style="border: none;">
-
 		    <?php while ($nfpost->have_posts()) : $nfpost->the_post(); ?>
                 <div>
                     <div class="row">
@@ -93,11 +93,10 @@ $nfpost = new WP_Query($args);
                         </div>
                     </div>
                 </div>
-
 		    <?php endwhile;
 		    wp_reset_query() ?>
-
         </div>
+        <?php endif; ?>
 
 
     </div>
