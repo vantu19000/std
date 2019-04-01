@@ -49,14 +49,14 @@ $nfpost = new WP_Query($args);
                                     <img src="https://satmythuathd.files.wordpress.com/2015/08/loi-son-tinh-dien.jpg"
                                          style="width: 100%">
                                 </div>
-                                <div class="col-md-8" style="padding-left: 0;">
+                                <div class="col-md-8" <?= (!wp_is_mobile())?'style="padding-left: 0;"':null ?>>
                                     <h6 style="display: inline-flex;">
                                         <img style="width: 15px; height: 15px; margin-right: 5px;"
                                              src="<?= get_template_directory_uri() . '/assets/images/icon/tick.png'; ?>">
                                         <?= get_the_title() ?>
                                     </h6>
-                                    <p><?= get_the_excerpt(); ?></p>
-                                    <p><a href="<?= get_the_permalink() ?>">Xem thêm</a></p>
+                                    <div><?= get_the_excerpt(); ?></div>
+                                    <div><a href="<?= get_the_permalink() ?>">Xem thêm</a></div>
                                 </div>
                             </div>
                         </div>
@@ -80,7 +80,7 @@ $nfpost = new WP_Query($args);
                                     <img src="https://satmythuathd.files.wordpress.com/2015/08/loi-son-tinh-dien.jpg"
                                          style="width: 100%">
                                 </div>
-                                <div class="col-md-8" style="padding-left: 0;">
+                                <div class="col-md-8" <?= (!wp_is_mobile())?'style="padding-left: 0;"':null ?>>
                                     <h6 style="display: inline-flex;">
                                         <img style="width: 15px; height: 15px; margin-right: 5px;"
                                              src="<?= get_template_directory_uri() . '/assets/images/icon/tick.png'; ?>">
