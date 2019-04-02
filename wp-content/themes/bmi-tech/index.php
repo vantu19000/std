@@ -30,7 +30,7 @@ $general = $config->general->params;
                 }
                 ?>
             <div class="col-6 col-md-3 text-center">
-                <img src="<?= $img ?>">
+                <img src="<?= $img ?>" style="margin-bottom: 15px;">
                 <div class="ser-text">
                     <p><?= $text ?></p>
                 </div>
