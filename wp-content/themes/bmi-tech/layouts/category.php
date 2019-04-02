@@ -115,6 +115,8 @@ $categories = get_terms( array(
             })
 
             $(".classic").click(function () {
+                var size = $(this).children("option").length;
+                alert(size);
                 loadProduct($(this).val());
             })
 
@@ -135,9 +137,7 @@ $categories = get_terms( array(
             },
             success: function (response) {
 
-                console.log(response);
-                // return;
-
+                // console.log(response);
 
                 if (response.status == 1) {
                     $(".albumCate").html(response.data);
