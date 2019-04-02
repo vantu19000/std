@@ -30,11 +30,7 @@ $general = $config->general->params;
                 }
                 ?>
             <div class="col-6 col-md-3 text-center">
-                <div id="hex3" class="hexagon-wrapper">
-                    <div id="color3" class="hexagon text-center align-middle">
-                        <img src="<?= $img ?>">
-                    </div>
-                </div>
+                <img src="<?= $img ?>">
                 <div class="ser-text">
                     <p><?= $text ?></p>
                 </div>
