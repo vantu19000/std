@@ -12,20 +12,20 @@ $general = $config->general->params;
         <div class="row">
             <?php for ($i = 0; $i < 4; $i ++ ): ?>
             <?php
-                $img = get_template_directory_uri() . '/assets/images/icon/setting.png';
+                $img = get_template_directory_uri() . '/assets/images/icon/direction1.png';
                 $text = $general->criteria_1;
                 switch ($i){
                     case 1:
-                        $img = get_template_directory_uri() . '/assets/images/icon/machine1.png';
+                        $img = get_template_directory_uri() . '/assets/images/icon/direction'.($i + 1) . '.png';
 	                    $text = $general->criteria_2;
                         break;
 	                case 2:
-		                $img = get_template_directory_uri() . '/assets/images/icon/machine2.png';
+		                $img = get_template_directory_uri() . '/assets/images/icon/direction'.($i + 1) . '.png';
 		                $text = $general->criteria_3;
 		                break;
 	                case 3:
 		                $text = $general->criteria_4;
-		                $img = get_template_directory_uri() . '/assets/images/icon/machine3.png';
+		                $img = get_template_directory_uri() . '/assets/images/icon/direction'.($i + 1) . '.png';
 		                break;
                 }
                 ?>
