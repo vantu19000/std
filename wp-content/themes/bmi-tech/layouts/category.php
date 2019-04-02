@@ -114,6 +114,10 @@ $categories = get_terms( array(
                 loadProduct($(this).val());
             })
 
+            $(".classic").click(function () {
+                loadProduct($(this).val());
+            })
+
         })
     })(jQuery)
 
