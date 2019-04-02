@@ -116,8 +116,7 @@ $categories = get_terms( array(
 
             $(".classic").click(function () {
                 var size = $(this).children("option").length;
-                alert(size);
-                loadProduct($(this).val());
+                if (size == 1) loadProduct($(this).val());
             })
 
         })
