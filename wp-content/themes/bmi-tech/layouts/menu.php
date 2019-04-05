@@ -90,17 +90,17 @@ $primaryNav = wp_get_nav_menu_items($menuID);
             <div class="row" style="width: 100%; padding: 10px;">
                 <div class="col-4 col-md-4">
                     <button onclick="openNav()" class="btn"
-                            style="background: transparent;color: white;margin-top: 10px;">
+                            style="background: transparent;color: white;margin-top: 20px;">
                         <i class="fas fa-bars" style="font-size: 40px;"></i>
                     </button>
                 </div>
-                <div class="col-4 col-md-4 text-center align-middle">
+                <div class="col-5 col-md-5 text-center align-middle">
                     <a href="<?= get_site_url() ?>">
                         <img style="width: 100%;"
                              src="<?= get_template_directory_uri() . '/assets/images/logo.png' ?>"/>
                     </a>
                 </div>
-                <div class="col-4 col-md-4"></div>
+                <div class="col-3 col-md-3"></div>
             </div>
         <?php endif; ?>
 
