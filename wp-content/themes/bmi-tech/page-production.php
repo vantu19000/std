@@ -58,7 +58,7 @@ $products = new WP_Query( $args );
                     <div class="row" style="margin-bottom: 10px;">
                         <div class="col-md-6">
                             <div class="mt-3"></div>
-                            <h1 class="header-product">
+                            <h1 class="header-product" id="product<?= $i ?>">
 								<?= $demo[ $i ]['title'] ?>
                             </h1>
                         </div>

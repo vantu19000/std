@@ -37,12 +37,12 @@ $general = $config->general->params;
             <div class="col-md-3 text-center socialbox">
                 <div class="footer-info">
                     <ul class="footer-list">
-                        <li><a href="#">Trang chủ</a></li>
-                        <li><a href="#">Bảng màu</a></li>
-                        <li><a href="#">Sản phẩm</a></li>
-                        <li><a href="#">Công trình</a></li>
-                        <li><a href="#">Tin tức</a></li>
-                        <li><a href="#">Video</a></li>
+                        <li><a href="<?= get_site_url() ?>">Trang chủ</a></li>
+                        <li><a href="/bang-mau/">Bảng màu</a></li>
+                        <li><a href="/san-pham/">Sản phẩm</a></li>
+                        <li><a href="/bang-mau/">Công trình</a></li>
+                        <li><a href="/tin-tuc/">Tin tức</a></li>
+                        <li><a href="/video">Video</a></li>
                     </ul>
                 </div>
             </div>
@@ -50,10 +50,10 @@ $general = $config->general->params;
             <div class="col-md-4 footer-info">
                 <ul class="footer-list product-list">
                     <li><a href="javascript:void(0)">Danh mục sản phẩm</a></li>
-                    <li><a href="#">Cửa cổng</a></li>
-                    <li><a href="#">Vỏ tủ điện</a></li>
-                    <li><a href="#">Kệ giá hàng</a></li>
-                    <li><a href="#">Thang - Máng cáp</a></li>
+                    <li><a href="/san-pham/#product1">Cửa cổng</a></li>
+                    <li><a href="/san-pham/#product2">Vỏ tủ điện</a></li>
+                    <li><a href="/san-pham/#product3">Kệ giá hàng</a></li>
+                    <li><a href="/san-pham/#product4">Thang - Máng cáp</a></li>
                     <li><a href="#">Sản phẩm nổi bật</a></li>
                 </ul>
             </div>
