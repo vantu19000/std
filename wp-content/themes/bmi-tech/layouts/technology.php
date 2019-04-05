@@ -37,7 +37,7 @@ $tech = new WP_Query($args);
 
                 <?php for ($i = 0; $i < 1; $i++): ?>
                     <?php while ($tech->have_posts()) : $tech->the_post(); ?>
-                        <?php $img = 'http://cafefcdn.com/thumb_w/650/Images/Uploaded/Share/2012/05/26/son-tinh-dien.jpg'; ?>
+                        <?php $img = get_template_directory_uri() . '/assets/images/son-tinh-dien.jpg'; ?>
 
                         <div class="row">
                             <div class="col-md-12">
