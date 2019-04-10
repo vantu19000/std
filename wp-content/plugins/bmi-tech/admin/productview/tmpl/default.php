@@ -6,9 +6,9 @@ $data = isset($items->$type)?$items->$type:null;
 $taxonomy = 'product_category';
 $terms = get_terms($taxonomy);
 
-echo "<pre>";
-print_r($terms);
-exit;
+//echo "<pre>";
+//print_r($terms);
+//exit;
 
 
 ?>

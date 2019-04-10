@@ -5,14 +5,14 @@ Template name: Trang Sản phẩm
 
 get_header();
 
+$taxonomy = 'product_category';
+$terms = get_terms($taxonomy);
 
-$args = array(
-	'post_type'      => 'bmi_product',
-	'orderby'        => 'date',
-	'posts_per_page' => '10'
-);
+//echo "<pre>";
+//print_r($terms);
+//exit;
 
-$products = new WP_Query( $args );
+
 
 ?>
 
@@ -38,28 +38,29 @@ $products = new WP_Query( $args );
                     </div>
                 </div>
 
-				<?php
-				$demo = array(
-					1 => array( 'title' => 'CỬA CỔNG' ),
-					2 => array(
-						'title' => 'VỎ TỦ ĐIỆN'
-					),
-					3 => array(
-						'title' => 'KỆ - GIÁ HÀNG'
-					),
-					4 => array(
-						'title' => 'THANG - MÁNG CÁP'
-					)
-				);
-				?>
+				<?php foreach ( $terms AS $i => $term ): ?>
 
-				<?php for ( $i = 1; $i < 4; $i ++ ): ?>
+                <?php
+                    $args = array(
+                        'post_type'      => 'bmi_product',
+                        'orderby'        => 'date',
+                        'posts_per_page' => '10',
+                        'tax_query' => array(
+                            array(
+                                'taxonomy' => 'product_category',
+                                'field' => 'term_id',
+                                'terms' => $term->term_id
+                            )
+                        )
+                    );
+                    $products = new WP_Query( $args );
+                ?>
 
                     <div class="row" style="margin-bottom: 10px;">
                         <div class="col-md-6">
                             <div class="mt-3"></div>
                             <h1 class="header-product" id="product<?= $i ?>">
-								<?= $demo[ $i ]['title'] ?>
+								<?= $term->name ?>
                             </h1>
                         </div>
                         <div class="col-md-6">
@@ -146,7 +147,7 @@ $products = new WP_Query( $args );
 
                     </script>
 
-				<?php endfor; ?>
+				<?php endforeach; ?>
 
 
             </div>

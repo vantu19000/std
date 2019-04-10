@@ -2,14 +2,19 @@
 
 	<tbody>
 
-	<tr>
-		<th scope="row"><label for="hotline">Mục 1</label></th>
+
+	<tr class="addcategory" style="">
+		<th><label for="hotline">Mục</label></th>
 		<td>
-			<select name="catid">
-				<option value="">Chọn danh mục</option>
-			</select>
+			<select name="cat_id">
+                <option value="">Chọn danh mục</option>
+                <?php foreach ($terms AS $value): ?>
+                <option value="<?= $value->term_id ?>"><?= $value->name ?></option>
+                <?php endforeach; ?>
+            </select>
 		</td>
 	</tr>
+
 
 	</tbody>
 

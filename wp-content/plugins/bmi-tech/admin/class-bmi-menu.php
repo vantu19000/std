@@ -12,7 +12,7 @@ class BMIMenu {
         add_submenu_page( 'bmi_dashboard', 'Danh sách mail đã gửi', 'Danh sách Mail đã gửi', 'manage_options', 'bmi_emails', array( get_called_class(), 'emails_page' ) );
         add_submenu_page( 'bmi_dashboard', 'Đội ngũ nhân viên', 'Đội ngũ nhân viên', 'manage_options', 'bmi_employee', array( get_called_class(), 'employee_page' ) );
         add_submenu_page( 'bmi_dashboard', 'Cài đặt chung', 'Cài đặt chung', 'manage_options', 'bmi_setting', array( get_called_class(), 'setting_page' ) );
-        add_submenu_page( 'bmi_dashboard', 'Hiển thị trang sản phẩm', 'Hiển thị trang sản phẩm', 'manage_options', 'product_page', array( get_called_class(), 'product_page' ) );
+//        add_submenu_page( 'bmi_dashboard', 'Hiển thị trang sản phẩm', 'Hiển thị trang sản phẩm', 'manage_options', 'product_page', array( get_called_class(), 'product_page' ) );
     }
 
     public static function product_page(){
