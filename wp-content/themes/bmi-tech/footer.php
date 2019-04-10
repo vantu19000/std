@@ -42,7 +42,7 @@ $general = $config->general->params;
                         <li><a href="/san-pham/">Sản phẩm</a></li>
                         <li><a href="/bang-mau/">Công trình</a></li>
                         <li><a href="/tin-tuc/">Tin tức</a></li>
-                        <li><a href="/video">Video</a></li>
+                        <li><a href="/videos">Video</a></li>
                     </ul>
                 </div>
             </div>
