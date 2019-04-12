@@ -15,8 +15,19 @@ $primaryNav = wp_get_nav_menu_items($menuID);
     function closeNav() {
         document.getElementById("mobilediv").style.marginLeft = "-100%";
     }
-
 </script>
+
+<?php if (!wp_is_mobile()): ?>
+    <script>
+        jQuery(window).scroll(function(){
+            var sticky = jQuery('.menu-header'),
+                scroll = jQuery(window).scrollTop();
+
+            if (scroll >= 300) sticky.addClass('fixed-top');
+            else sticky.removeClass('fixed-top');
+        });
+    </script>
+<?php endif; ?>
 
 <div class="mobilediv" id="mobilediv">
     <div id="mySidenav" class="sidenav">
