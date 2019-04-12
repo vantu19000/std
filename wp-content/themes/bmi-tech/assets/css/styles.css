@@ -304,6 +304,7 @@ img{
 }
 .footer {
     background: #0463be;
+    padding-top: 30px;
 }
 .footer .social img{
 
@@ -647,7 +648,7 @@ hr {
     text-align: center;
 }
 .socialbox {
-    background: #034585;
+    /*background: #034585;*/
 }
 
 /* The side navigation menu */

@@ -72,7 +72,7 @@ $general = $config->general->params;
 
 <section>
     <div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1862.9575867619512!2d106.00126761456634!3d20.95592139906202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135a5a4fb0b0a07%3A0xae728854707947cf!2zSMawbmcgVsaw4bujbmc!5e0!3m2!1sen!2s!4v1553700137583" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3726.1282078796607!2d106.00553074973554!3d20.947365885974044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x80713e1f3f2f03f8!2zQ8O0bmcgdHkgQ1AgY8O0bmcgbmdo4buHIGNhbyBIUCBWaeG7h3QgTmFt!5e0!3m2!1sen!2s!4v1555055621223!5m2!1sen!2s" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
     </div>
 </section>
 
