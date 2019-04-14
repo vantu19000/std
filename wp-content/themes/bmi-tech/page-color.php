@@ -76,7 +76,7 @@ $general = $config->general->params;
 				                break;
 		                }
 		                ?>
-                        <div class="col-md-12 text-center">
+                        <div class="col-6 col-md-12 text-center">
                             <img src="<?= $img ?>" style="margin-bottom: 15px;">
                             <div class="ser-text">
                                 <p><?= $text ?></p>
@@ -134,16 +134,33 @@ $general = $config->general->params;
                     }
                 </style>
 
+
+                <?php
+                $args = array(
+	                'post_type'      => 'bmi_color',
+	                'tax_query' => array(
+		                array(
+			                'taxonomy' => 'categories',
+			                'field' => 'term_id',
+			                'terms' => $categories[0]->term_id
+		                )
+	                )
+                );
+                $colors = new WP_Query( $args );
+
+                ?>
+
                 <div class="row" style="margin-top: 20px;">
                     <!--				<div class="col-md-12">-->
 
-                    <?php for ($i = 0; $i < 30; $i++): ?>
+                    <?php //for ($i = 0; $i < 30; $i++): ?>
+	                <?php while ( $colors->have_posts() ) : $colors->the_post(); ?>
 
-                        <?php $color = 'yellow'; ?>
+                        <?php $color = get_field( 'ma_mau' ); ?>
 
                         <script>
                             $(document).ready(function () {
-                                $('[data-toggle="popover<?= $i ?>"]').popover({
+                                $('[data-toggle="popover<?= get_the_ID() ?>"]').popover({
                                     placement: 'top',
                                     trigger: 'hover',
                                     template: '<div class="popover" role="tooltip">' +
@@ -160,22 +177,22 @@ $general = $config->general->params;
 
                             <div class="row" style="margin-top: 20px;">
                                 <div
-                                        data-toggle="popover<?= $i ?>"
+                                        data-toggle="popover<?= get_the_ID() ?>"
                                         data-content=" "
-                                        class="col-3 col-md-3 color-box<?= $i ?>">
-                                    <div style="width: 45px;height: 45px; background: gold;"></div>
+                                        class="col-3 col-md-3 color-box<?= get_the_ID() ?>">
+                                    <div style="width: 45px;height: 45px; background: <?= $color ?>;"></div>
                                 </div>
                                 <div class="col-9 col-md-9" style="padding-left: 20px; padding-right: 0px;">
                                     <h6 style="letter-spacing: 1px; color: #0463be;font-weight: normal; font-family: SanFranciscoDisplayRegular;">
-                                        320</h6>
-                                    <h6 style="letter-spacing: 1px; color: #0463be;font-weight: normal; font-family: SanFranciscoDisplayRegular;">
-                                        Yellow Green</h6>
+                                        <?= get_field('code') ?>
+                                    </h6>
+                                    <h6 style="letter-spacing: 1px; color: #0463be;font-weight: normal; font-family: SanFranciscoDisplayRegular;"><?= get_the_title() ?></h6>
                                 </div>
                             </div>
 
                         </div>
 
-                    <?php endfor; ?>
+                    <?php endwhile; ?>
 
 
                     <!--				</div>-->
