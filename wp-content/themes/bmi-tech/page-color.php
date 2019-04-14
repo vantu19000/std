@@ -11,6 +11,11 @@ $categories = get_terms(array(
     'post_type' => 'bmi_color',
     'hide_empty' => false,
 ));
+
+
+global $config;
+$general = $config->general->params;
+
 ?>
 
     <style>
@@ -52,37 +57,33 @@ $categories = get_terms(array(
             <div class="col-md-4" style="background: #E3EDF6">
 
                 <div class="row ourservice">
-                    <?php for ($i = 0; $i < 4; $i++): ?>
-                        <?php
-                        $img = get_template_directory_uri() . '/assets/images/icon/setting.png';
-                        $text = 'Dịch vụ uy tín';
-                        switch ($i) {
-                            case 1:
-                                $img = get_template_directory_uri() . '/assets/images/icon/machine1.png';
-                                $text = 'Đem lại sự hài lòng cho khách hàng';
-                                break;
-                            case 2:
-                                $img = get_template_directory_uri() . '/assets/images/icon/machine2.png';
-                                $text = 'Giá cả hợp lý';
-                                break;
-                            case 3:
-                                $text = "Giao hàng 24h";
-                                $img = get_template_directory_uri() . '/assets/images/icon/machine3.png';
-                                break;
-                        }
-                        ?>
-                        <div class="col-6 col-md-12 text-center">
-                            <div id="hex3" class="hexagon-wrapper">
-                                <div id="color3" class="hexagon text-center align-middle">
-                                    <img src="<?= $img ?>">
-                                </div>
-                            </div>
+	                <?php for ($i = 0; $i < 4; $i ++ ): ?>
+		                <?php
+		                $img = get_template_directory_uri() . '/assets/images/icon/direction1.png';
+		                $text = $general->criteria_1;
+		                switch ($i){
+			                case 1:
+				                $img = get_template_directory_uri() . '/assets/images/icon/direction'.($i + 1) . '.png';
+				                $text = $general->criteria_2;
+				                break;
+			                case 2:
+				                $img = get_template_directory_uri() . '/assets/images/icon/direction'.($i + 1) . '.png';
+				                $text = $general->criteria_3;
+				                break;
+			                case 3:
+				                $text = $general->criteria_4;
+				                $img = get_template_directory_uri() . '/assets/images/icon/direction'.($i + 1) . '.png';
+				                break;
+		                }
+		                ?>
+                        <div class="col-md-12 text-center">
+                            <img src="<?= $img ?>" style="margin-bottom: 15px;">
                             <div class="ser-text">
                                 <p><?= $text ?></p>
                             </div>
                         </div>
 
-                    <?php endfor; ?>
+	                <?php endfor; ?>
 
                 </div>
 
