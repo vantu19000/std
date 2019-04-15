@@ -21,7 +21,7 @@ function loadproduct() {
 
 	if ($query->have_posts()){
 		while ( $query->have_posts() ) : $query->the_post();
-			$thumb = get_the_post_thumbnail_url(get_the_ID(), 'product_thumb');
+			$thumb = get_the_post_thumbnail_url(get_the_ID(), 'cate_product_thumb');
 			if (!$thumb)
 			$thumb = get_template_directory_uri() . "/assets/images/he-thong-day-chuyen-son-tinh-dien.jpg";
 			$html .= '<div class="col-4 col-md-4">';
