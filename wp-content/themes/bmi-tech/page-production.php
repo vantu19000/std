@@ -91,7 +91,7 @@ $terms = get_terms($taxonomy);
                     <div class="slider<?= $i ?> lazy<?= $i ?>">
 						<?php for ( $j = 0; $j < 3; $j ++ ): ?>
 							<?php while ( $products->have_posts() ) : $products->the_post(); ?>
-								<?php $thumbnail = get_the_post_thumbnail_url( $post->ID, 'product_cate' ); ?>
+								<?php $thumbnail = get_the_post_thumbnail_url( $post->ID, 'medium' ); ?>
                                 <div class="productitem">
                                     <a href="<?= get_the_permalink() ?>">
                                         <img style="height: 289px; width: 100%"
