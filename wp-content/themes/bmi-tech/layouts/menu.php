@@ -2,6 +2,7 @@
 $menuLocations = get_nav_menu_locations();
 $menuID = $menuLocations['menu-primary'];
 $primaryNav = wp_get_nav_menu_items($menuID);
+
 ?>
 
 
@@ -19,7 +20,7 @@ $primaryNav = wp_get_nav_menu_items($menuID);
 
 <?php if (!wp_is_mobile()): ?>
     <script>
-        jQuery(window).scroll(function(){
+        jQuery(window).scroll(function () {
             var sticky = jQuery('.menu-header'),
                 scroll = jQuery(window).scrollTop();
 
@@ -33,9 +34,9 @@ $primaryNav = wp_get_nav_menu_items($menuID);
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <?php if (is_array($primaryNav)): ?>
-        <?php foreach ($primaryNav AS $value): ?>
-            <a href="<?= $value->url ?>"><?= $value->title ?></a>
-        <?php endforeach; ?>
+            <?php foreach ($primaryNav AS $value): ?>
+                <a href="<?= $value->url ?>"><?= $value->title ?></a>
+            <?php endforeach; ?>
         <?php endif; ?>
     </div>
     <div class="closemobilenav" onclick="closeNav()"></div>
@@ -83,10 +84,25 @@ $primaryNav = wp_get_nav_menu_items($menuID);
                                 <ul class="mainmenu">
                                     <?php if (is_array($primaryNav) && count($primaryNav) > 0): ?>
                                         <?php foreach ($primaryNav AS $value): ?>
-                                            <li class="nav-item">
-                                                <a class="nav-link js-scroll-trigger"
-                                                   href="<?= $value->url ?>"><?= $value->title ?></a>
-                                            </li>
+
+                                            <?php $checkSub = bmiCheckSubMenu($value->ID, $primaryNav); ?>
+
+                                            <?php if ($checkSub): ?>
+
+                                                <li class="nav-item dropdown">
+                                                    <a class="nav-link js-scroll-trigger"
+                                                       href="<?= $value->url ?>"><?= $value->title ?></a>
+                                                    <div class="dropdown-content">
+                                                        <p>Hello World!</p>
+                                                    </div>
+                                                </li>
+
+                                            <?php else: ?>
+                                                <li class="nav-item">
+                                                    <a class="nav-link js-scroll-trigger" href="<?= $value->url ?>"><?= $value->title ?></a>
+                                                </li>
+                                            <?php endif; ?>
+
                                         <?php endforeach; ?>
                                     <?php endif; ?>
                                 </ul>
@@ -96,6 +112,27 @@ $primaryNav = wp_get_nav_menu_items($menuID);
                 </div>
             </div>
         <?php endif; ?>
+
+        <style>
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                padding: 12px 16px;
+                z-index: 1;
+            }
+
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+        </style>
 
         <?php if (wp_is_mobile()): ?>
             <div class="row" style="width: 100%; padding: 10px;">
