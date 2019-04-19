@@ -55,7 +55,7 @@ $nfpost = new WP_Query($args);
                                              src="<?= get_template_directory_uri() . '/assets/images/icon/tick.png'; ?>">
                                         <?= get_the_title() ?>
                                     </h6>
-                                    <div><?= get_the_excerpt(); ?></div>
+                                    <div><?= BMIFontendHelper::cutString(get_the_excerpt(), 120); ?></div>
                                     <div><a href="<?= get_the_permalink() ?>">Xem thêm</a></div>
                                 </div>
                             </div>
@@ -86,7 +86,7 @@ $nfpost = new WP_Query($args);
                                              src="<?= get_template_directory_uri() . '/assets/images/icon/tick.png'; ?>">
 									    <?= get_the_title() ?>
                                     </h6>
-                                    <p><?= get_the_excerpt(); ?></p>
+                                    <p><?= BMIFontendHelper::cutString(get_the_excerpt(), 120); ?></p>
                                     <p><a href="<?= get_the_permalink() ?>">Xem thêm</a></p>
                                 </div>
                             </div>

@@ -764,3 +764,45 @@ hr {
         width: 100%
     }
 }
+
+
+.product-area .product-box{
+    border: 1px solid #c5c6c7;
+    box-shadow: 5px 5px 5px #c5c6c7;
+}
+
+.product-area .product-box .product-sumary .readmore button{
+    background: transparent;
+    border: 2px solid #007bff;
+    color: #007bff;
+    cursor: pointer;
+}
+.product-area .product-box .product-sumary .readmore button:hover{
+    background: #007bff;
+    border: 2px solid #007bff;
+    color: #fff;
+}
+.product-area .product-box .product-sumary .readmore{
+    margin-top: 20px;
+    font-size: 16px;
+}
+.product-area .product-box .product-sumary{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.product-area .product-box .product-sumary .product-title{
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+.product-area .product-box .product-sumary small{
+    margin-bottom: 20px;
+    font-family: SanFranciscoDisplayThin;
+    font-style: italic;
+    color: #c7c7c7;
+}
+.product-area .product-box .product-sumary h4{
+    font-family: SanFranciscoDisplayBold;
+    font-size: 18px;
+}

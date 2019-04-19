@@ -1,152 +1,40 @@
-<?php
-$categories = get_terms( array(
-	'taxonomy'   => 'product_category',
-	'post_type'  => 'bmi_product',
-	'hide_empty' => false,
-) );
-
-//echo "<pre>";
-//print_r($categories);
-//exit;
-
-
-//$args = array(
-//	'post_type' => 'bmi_product',
-//	'post_per_page' => 6,
-//	'tax_query' => array(
-//		array(
-//			'field' => 'term_id',
-//			'terms' => 5,
-//			'taxonomy' => 'product_category',
-//		)
-//	)
-//);
-//$query = new WP_Query( $args );
-//echo "<pre>";
-//if ($query->have_posts()){
-//	while ( $query->have_posts() ) : $query->the_post();
-//		print_r(the_title());
-//	endwhile;
-//}
-//wp_reset_query();
-//exit;
-
-?>
-
-<section class="categories">
+<section class="product-area">
 
     <div class="container">
         <div class="row">
-            <div class="col-md-4 categoryBox">
-                <h3 class="heading text-center">DANH MỤC <br>SƠN TĨNH ĐIỆN</h3>
-                <div class="category-items">
-					<?php $j = 0; ?>
-					<?php for ( $i = 0; $i < count( $categories ); $i ++ ): ?>
-						<?php $category = $categories[ $i ]; ?>
-						<?php $class = ( $i % 2 == 0 ) ? "chan" : "le"; ?>
-						<?php if ( $category->parent == 0 && $j < 5 ): ?>
-                            <select class="classic <?= $class ?>">
-                                <option value="<?= $category->term_id ?>"><?= $category->name ?></option>
-								<?php foreach ( $categories AS $child ): ?>
-									<?php if ( $child->parent == $category->term_id ): ?>
-                                        <option value="<?= $child->term_id ?>"><?= $child->name ?></option>
-									<?php endif; ?>
-								<?php endforeach; ?>
-                            </select>
-							<?php $j ++; endif; ?>
-					<?php endfor; ?>
 
-                    <select class="classic chan">
-                        <option value="">Sản phẩm nổi bật</option>
-                    </select>
-                </div>
+            <?php for ($i = 0; $i < 4; $i++): ?>
+                <div class="col-6 col-md-3">
+                    <div class="product-box">
 
-            </div>
-            <div class="col-md-8 albumCate">
+                        <div class="product-img">
+                            <a href="#">
+                                <img src="http://sontinhdienght.vn/wp-content/uploads/2018/11/ghtvn-giake9-255x255.png"
+                                     style="width: 100%;height: 214px">
+                            </a>
+                        </div>
 
-                <div class="row" style="margin-top: 10px">
-                    <div class="col-4 col-md-4">
-                        <a href="#">
-                            <img src="https://giaphu.com.vn/wp-content/uploads/2018/05/he-thong-day-chuyen-son-tinh-dien.jpg"/>
-                        </a>
-                    </div>
-                    <div class="col-4 col-md-4">
-                        <a href="#">
-                            <img src="https://giaphu.com.vn/wp-content/uploads/2018/05/he-thong-day-chuyen-son-tinh-dien.jpg"/>
-                        </a>
-                    </div>
-                    <div class="col-4 col-md-4">
-                        <a href="#">
-                            <img src="https://giaphu.com.vn/wp-content/uploads/2018/05/he-thong-day-chuyen-son-tinh-dien.jpg"/>
-                        </a>
-                    </div>
-                    <div class="col-4 col-md-4">
-                        <a href="#">
-                            <img src="https://giaphu.com.vn/wp-content/uploads/2018/05/he-thong-day-chuyen-son-tinh-dien.jpg"/>
-                        </a>
-                    </div>
-                    <div class="col-4 col-md-4">
-                        <a href="#">
-                            <img src="https://giaphu.com.vn/wp-content/uploads/2018/05/he-thong-day-chuyen-son-tinh-dien.jpg"/>
-                        </a>
-                    </div>
-                    <div class="col-4 col-md-4">
-                        <a href="#">
-                            <img src="https://giaphu.com.vn/wp-content/uploads/2018/05/he-thong-day-chuyen-son-tinh-dien.jpg"/>
-                        </a>
+                        <div class="product-sumary text-center">
+                            <div>
+                                <small>Sơn máng cáp</small>
+                            </div>
+                            <div class="product-title">
+                                <h4>
+                                    <a href="#">
+                                        Sản phẩm số 1
+                                    </a>
+                                </h4>
+                            </div>
+                            <div class="readmore">
+                                <button>Đọc thêm</button>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
+            <?php endfor; ?>
 
-            </div>
         </div>
     </div>
 
 </section>
-
-<script type="text/javascript">
-    (function ($) {
-        $(document).ready(function () {
-            var term_id = 1;
-
-            loadProduct($( ".classic" ).first().val());
-
-            $(".classic").change(function () {
-                loadProduct($(this).val());
-            })
-
-            $(".classic").click(function () {
-                var size = $(this).children("option").length;
-                if (size == 1) loadProduct($(this).val());
-            })
-
-        })
-    })(jQuery)
-
-    function loadProduct(term_id) {
-        $.ajax({
-            type: "post",
-            dataType: "json",
-            url: '<?php echo admin_url( 'admin-ajax.php' );?>',
-            data: {
-                action: "load_product",
-                term_id: term_id,
-            },
-            context: this,
-            beforeSend: function () {
-            },
-            success: function (response) {
-
-                // console.log(response);
-
-                if (response.status == 1) {
-                    $(".albumCate").html(response.data);
-                } else {
-                    console.log("error while loading product")
-                }
-            },
-            error: function (jqXHR, textStatus, errorThrown) {
-                console.log('The following error occured: ' + textStatus, errorThrown);
-            }
-        })
-    }
-</script>
