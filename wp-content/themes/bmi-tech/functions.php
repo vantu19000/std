@@ -14,6 +14,7 @@ if ( ! function_exists( 'bmi_setup' ) ) :
 		add_image_size('news_thumb', 223, 185);
 		add_image_size('product_thumb', 223, 167);
 		add_image_size('cate_product_thumb', 233, 166);
+		add_image_size('home_cate_product', 255, 255);
 		register_nav_menus( array(
 			'menu-primary' => esc_html__( 'Primary Menu', 'bmi' ),
 		) );
@@ -54,35 +55,15 @@ $config = ConfigHelper::loadConfig();
 
 function bmi_widgets_init() {
 
-	register_sidebar( array(
-		'name'          => esc_html__( 'Banner trái', 'bmi' ),
-		'id'            => 'left-sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'bmi' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<div style="display: none">',
-		'after_title'   => '</div>',
-	) );
-
-	register_sidebar( array(
-		'name'          => esc_html__( 'Banner tin tức/Dự án phải', 'bmi' ),
-		'id'            => 'right-sidebar-2',
-		'description'   => esc_html__( 'Add widgets here.', 'bmi' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<div style="display: none">',
-		'after_title'   => '</div>',
-	) );
-
-	register_sidebar( array(
-		'name'          => esc_html__( 'Banner trái sản phẩm', 'bmi' ),
-		'id'            => 'left-sidebar-3',
-		'description'   => esc_html__( 'Add widgets here.', 'bmi' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<div style="display: none">',
-		'after_title'   => '</div>',
-	) );
+//	register_sidebar( array(
+//		'name'          => esc_html__( 'Banner trái', 'bmi' ),
+//		'id'            => 'left-sidebar-1',
+//		'description'   => esc_html__( 'Add widgets here.', 'bmi' ),
+//		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+//		'after_widget'  => '</section>',
+//		'before_title'  => '<div style="display: none">',
+//		'after_title'   => '</div>',
+//	) );
 
 }
 add_action( 'widgets_init', 'bmi_widgets_init' );
@@ -112,9 +93,6 @@ define('NEWS_THUMB',get_template_directory_uri() . '/assets/images/default-news-
 define('THEME_PATH', get_template_directory().'/');
 define('THEME_URI', get_template_directory_uri().'/');
 define('CHILD_URI', get_stylesheet_directory_uri().'/');
-define('THEMEX_PATH', THEME_PATH.'framework/');
-define('THEMEX_URI', THEME_URI.'framework/');
-define('THEMEX_PREFIX', 'themex_');
 
 
 //Set content width

@@ -766,11 +766,22 @@ hr {
 }
 
 
+.product-area .category-header{
+    margin-top: 30px;
+}
+.product-area .category-header .category-header-title{
+    color: #fff;
+    padding-left: 20px;
+    font-size: 16px;
+    height: 40px;
+    line-height: 40px;
+    text-transform: uppercase;
+}
 .product-area .product-box{
     border: 1px solid #c5c6c7;
     box-shadow: 5px 5px 5px #c5c6c7;
+    max-height: 410px;
 }
-
 .product-area .product-box .product-sumary .readmore button{
     background: transparent;
     border: 2px solid #007bff;

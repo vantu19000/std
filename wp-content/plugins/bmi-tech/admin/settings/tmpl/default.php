@@ -12,7 +12,7 @@ $data = isset($items->$type)?$items->$type:null;
         <li class="all">
             <a href="admin.php?page=bmi_setting" class="<?= ($type == 'general')?'current':null ?>" aria-current="page">Cài đặt chung</a> |
         </li>
-        <li class="publish"><a href="#">Đối tác</a> |</li>
+        <li class="publish"><a class="<?= ($type == 'homecate')?'current':null ?>" href="admin.php?page=bmi_setting&name=homecate">Danh mục sản phẩm trang chủ</a> </li>
     </ul>
 
     <form method="post" action="<?= get_admin_url() . '?controller=settings&task=save' ?>" novalidate="novalidate">

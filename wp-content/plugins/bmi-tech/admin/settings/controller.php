@@ -25,7 +25,7 @@ class BMIControllerSettings {
 			$result = $wpdb->insert($wpdb->prefix.'bmi_configuration', $data['data']);
 		}
 
-		wp_redirect('admin.php?page=bmi_setting');
+		wp_redirect('admin.php?page=bmi_setting&name=' . $data['data']['name'] );
 
 	}
 }
