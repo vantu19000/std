@@ -50,14 +50,12 @@ if( ! function_exists( 'bmiGetSubMenu' )){
 
     function bmiGetSubMenu($parent_id, $menu)
     {
-        $submenu = $menu;
-
+        $data = array();
         foreach ($menu AS $value) {
             if ($value->menu_item_parent == $parent_id) {
-                echo '<a class="dropdown-item" href="'.$value->url.'">'.$value->title.'</a>';
-//                bmiGetSubMenu($value->ID, $submenu);
+                $data[] = $value;
             }
         }
-
+        return $data;
     }
 }

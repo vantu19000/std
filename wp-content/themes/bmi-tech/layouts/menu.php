@@ -85,23 +85,35 @@ $primaryNav = wp_get_nav_menu_items($menuID);
                                     <?php if (is_array($primaryNav) && count($primaryNav) > 0): ?>
                                         <?php foreach ($primaryNav AS $value): ?>
 
-                                            <?php $checkSub = bmiCheckSubMenu($value->ID, $primaryNav); ?>
+                                        <?php if ($value->menu_item_parent == 0): ?>
+                                                <?php $checkSub = bmiCheckSubMenu($value->ID, $primaryNav); ?>
 
-                                            <?php if ($checkSub): ?>
+                                                <?php if ($checkSub): ?>
 
-                                                <li class="nav-item dropdown">
-                                                    <a class="nav-link js-scroll-trigger"
-                                                       href="<?= $value->url ?>"><?= $value->title ?></a>
-                                                    <div class="dropdown-content">
-                                                        <p>Hello World!</p>
-                                                    </div>
-                                                </li>
+                                                    <?php $sub = bmiGetSubMenu($value->ID, $primaryNav); ?>
 
-                                            <?php else: ?>
-                                                <li class="nav-item">
-                                                    <a class="nav-link js-scroll-trigger" href="<?= $value->url ?>"><?= $value->title ?></a>
-                                                </li>
-                                            <?php endif; ?>
+                                                    <li class="nav-item dropdown">
+                                                        <a class="nav-link js-scroll-trigger" href="<?= $value->url ?>"><?= $value->title ?> <i class="fas fa-caret-down"></i></a>
+
+                                                        <div class="dropdown-content">
+                                                            <?php foreach ($sub AS $submenu): ?>
+                                                            <p>
+                                                                <a href="<?= $submenu->url ?>">
+                                                                    <?= $submenu->title ?>
+                                                                </a>
+                                                            </p>
+                                                            <?php endforeach; ?>
+                                                        </div>
+                                                    </li>
+
+                                                <?php else: ?>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link js-scroll-trigger" href="<?= $value->url ?>"><?= $value->title ?></a>
+                                                    </li>
+                                                <?php endif; ?>
+
+                                        <?php endif; ?>
+
 
                                         <?php endforeach; ?>
                                     <?php endif; ?>
@@ -122,13 +134,21 @@ $primaryNav = wp_get_nav_menu_items($menuID);
             .dropdown-content {
                 display: none;
                 position: absolute;
-                background-color: #f9f9f9;
-                min-width: 160px;
+                background-color: #fff;
+                -webkit-border-radius: 5px;
+                -moz-border-radius: 5px;
+                border-radius: 5px;
+                min-width: 260px;
+                max-width: 400px;
                 box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
                 padding: 12px 16px;
                 z-index: 1;
             }
 
+            .dropdown-content p a {
+                color: #c7c7c7 !important;
+                font-size: 14px;
+            }
             .dropdown:hover .dropdown-content {
                 display: block;
             }
