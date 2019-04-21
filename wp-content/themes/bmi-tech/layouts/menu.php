@@ -97,11 +97,11 @@ $primaryNav = wp_get_nav_menu_items($menuID);
 
                                                         <div class="dropdown-content">
                                                             <?php foreach ($sub AS $submenu): ?>
-                                                            <p>
+                                                            <div class="sub-item">
                                                                 <a href="<?= $submenu->url ?>">
                                                                     <?= $submenu->title ?>
                                                                 </a>
-                                                            </p>
+                                                            </div>
                                                             <?php endforeach; ?>
                                                         </div>
                                                     </li>
@@ -134,7 +134,7 @@ $primaryNav = wp_get_nav_menu_items($menuID);
             .dropdown-content {
                 display: none;
                 position: absolute;
-                background-color: #fff;
+                background-color: #1678be;
                 -webkit-border-radius: 5px;
                 -moz-border-radius: 5px;
                 border-radius: 5px;
@@ -145,9 +145,15 @@ $primaryNav = wp_get_nav_menu_items($menuID);
                 z-index: 1;
             }
 
-            .dropdown-content p a {
-                color: #c7c7c7 !important;
+            .dropdown-content .sub-item {
+                margin-bottom: 10px;
+            }
+            .dropdown-content .sub-item a {
+                color: #fff;
                 font-size: 14px;
+            }
+            .dropdown-content .sub-item a:hover{
+                color: #c7c7c7 !important;
             }
             .dropdown:hover .dropdown-content {
                 display: block;
