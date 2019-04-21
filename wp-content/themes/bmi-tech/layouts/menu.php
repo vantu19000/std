@@ -7,7 +7,7 @@ $primaryNav = wp_get_nav_menu_items($menuID);
 
 
 <!-- Start Navigation -->
-
+<?php if (wp_is_mobile()): ?>
 <script>
     function openNav() {
         document.getElementById("mobilediv").style.marginLeft = "0";
@@ -16,7 +16,39 @@ $primaryNav = wp_get_nav_menu_items($menuID);
     function closeNav() {
         document.getElementById("mobilediv").style.marginLeft = "-100%";
     }
+
+    function openSub(id) {
+        if (jQuery(".dropdown-content-mobile"+id).is(":visible")){
+            jQuery(".dropdown"+id).find('i').removeClass('fa-caret-down');
+            jQuery(".dropdown"+id).find('i').addClass('fa-caret-right');
+        } else {
+            jQuery(".dropdown"+id).find('i').removeClass('fa-caret-right');
+            jQuery(".dropdown"+id).find('i').addClass('fa-caret-down');
+        }
+        jQuery(".dropdown-content-mobile"+id).slideToggle();
+    }
+
 </script>
+    <style>
+        .dropdown{
+            width: 100%;
+        }
+        .dropdown i {
+            margin-left: 5px;
+            font-size: 22px;
+        }
+        .dropdown-content-mobile {
+            margin-left: 20px;
+            width: 100%;
+            display: none;
+        }
+        .dropdown-content-mobile a{
+            font-size: 14px;
+            font-weight: bold;
+            font-family: SanFranciscoDisplayThin;
+        }
+    </style>
+<?php endif; ?>
 
 <?php if (!wp_is_mobile()): ?>
     <script>
@@ -33,11 +65,45 @@ $primaryNav = wp_get_nav_menu_items($menuID);
 <div class="mobilediv" id="mobilediv">
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <?php if (is_array($primaryNav)): ?>
-            <?php foreach ($primaryNav AS $value): ?>
-                <a href="<?= $value->url ?>"><?= $value->title ?></a>
-            <?php endforeach; ?>
-        <?php endif; ?>
+
+	    <?php if (is_array($primaryNav) && count($primaryNav) > 0): ?>
+		    <?php foreach ($primaryNav AS $value): ?>
+
+			    <?php if ($value->menu_item_parent == 0): ?>
+				    <?php $checkSub = bmiCheckSubMenu($value->ID, $primaryNav); ?>
+
+				    <?php if ($checkSub): ?>
+
+					    <?php $sub = bmiGetSubMenu($value->ID, $primaryNav); ?>
+
+                        <div class="dropdown dropdown<?= $value->ID ?>" onclick="openSub(<?= $value->ID ?>)">
+                            <a href="#">
+	                            <?= $value->title ?> <i class="fas fa-caret-right"></i>
+                            </a>
+                            <div class="dropdown-content-mobile dropdown-content-mobile<?= $value->ID ?>">
+		                        <?php foreach ($sub AS $submenu): ?>
+                                    <div class="sub-item">
+                                        <a href="<?= $submenu->url ?>">
+					                        <?= $submenu->title ?>
+                                        </a>
+                                    </div>
+		                        <?php endforeach; ?>
+                            </div>
+                        </div>
+
+				    <?php else: ?>
+                        <div>
+                            <a href="<?= $value->url ?>"><?= $value->title ?></a>
+                        </div>
+				    <?php endif; ?>
+
+			    <?php endif; ?>
+
+
+		    <?php endforeach; ?>
+	    <?php endif; ?>
+
+
     </div>
     <div class="closemobilenav" onclick="closeNav()"></div>
 </div>
@@ -61,23 +127,6 @@ $primaryNav = wp_get_nav_menu_items($menuID);
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="mobilemenu collapse" id="navbarResponsive">
-                        <?php if (1 == 2): ?>
-                            <div class="row">
-                                <div class="col-md-8"></div>
-                                <div class="col-md-4">
-                                    <div id="imaginary_container">
-                                        <div class="input-group stylish-input-group">
-                                            <input type="text" class="form-control" placeholder="Search">
-                                            <span class="input-group-addon" style="border-radius: 0 5px 5px 0;">
-                                        <button type="submit" style="margin-top: 5px;">
-                                            <i class="fa fa-search"></i>
-                                        </button>
-                                    </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        <?php endif; ?>
 
                         <div class="row" style="position: absolute;bottom: 0;right: 0;">
                             <div class="col-md-12">
