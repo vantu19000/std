@@ -115,9 +115,9 @@ $items = array_slice($recentProduct, -5);
 
         <div class="row">
             <?php foreach ($items AS $value): ?>
-            <div class="col <?= $class ?>">
+            <div class="col-md-3 <?= $class ?> singleitem">
                 <a href="<?= get_the_permalink($value) ?>">
-                    <img style="max-height: 200px;"
+                    <img style="max-height: 200px;width: 100%;"
                          src="<?= get_the_post_thumbnail_url($value) ?>" alt="">
                 </a>
             </div>
@@ -148,6 +148,10 @@ $items = array_slice($recentProduct, -5);
 
 
 <style>
+
+    .singleitem {
+        margin-bottom: 20px;
+    }
 
     fieldset, label { margin: 0; padding: 0; }
     h1 { font-size: 1.5em; margin: 10px; }
