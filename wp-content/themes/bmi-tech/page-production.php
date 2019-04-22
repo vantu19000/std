@@ -94,7 +94,7 @@ $terms = get_terms($taxonomy);
 								<?php $thumbnail = get_the_post_thumbnail_url( $post->ID, 'medium' ); ?>
                                 <div class="productitem">
                                     <a href="<?= get_the_permalink() ?>">
-                                        <img style="height: 289px; width: 100%"
+                                        <img style="min-height: 150px; max-height: 220px; width: 100%"
                                              src="<?= $thumbnail ?>" alt="">
                                         <p class="text-center title-product" style="margin-top: 5px;color: #0463be;">
 											<?= get_the_title() ?>

@@ -71,7 +71,9 @@ $news = new WP_Query($args);
 
                 <div class="row" style="margin-top: 30px">
                     <div class="col-md-4">
-                        <img src="<?= $thumbnail ?>" style="width: 100%; height: 182px;">
+                        <a href="<?= get_the_permalink() ?>">
+                            <img src="<?= $thumbnail ?>" style="width: 100%; max-height: 170px;">
+                        </a>
                     </div>
                     <div class="col-md-8">
                         <h6>
@@ -80,7 +82,7 @@ $news = new WP_Query($args);
 	                            <?= get_the_title() ?>
                             </a>
                         </h6>
-                        <p><?= get_the_excerpt() ?></p>
+                        <p><?= BMIFontendHelper::cutString(get_the_excerpt(), 100) ?></p>
                         <p><a href="<?= get_the_permalink() ?>">Xem thêm</a></p>
                     </div>
                 </div>

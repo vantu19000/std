@@ -1,7 +1,7 @@
 <?php
 $args = array(
-    'category_name' => 'cong-nghe',
-    'posts_per_page' => 4,
+    'category_name' => 'noi-bat',
+    'posts_per_page' => 6,
 );
 $nfpost = new WP_Query($args);
 ?>
@@ -46,17 +46,23 @@ $nfpost = new WP_Query($args);
                         <div class="col-md-12">
                             <div class="row">
                                 <div class="col-md-4">
+                                    <a href="<?= get_the_permalink() ?>">
                                     <img src="https://satmythuathd.files.wordpress.com/2015/08/loi-son-tinh-dien.jpg"
-                                         style="width: 100%">
+                                         style="width: 100%;margin-top: 5px;">
+                                    </a>
                                 </div>
                                 <div class="col-md-8" <?= (!wp_is_mobile())?'style="padding-left: 0;"':null ?>>
                                     <h6 style="display: inline-flex;">
-                                        <img style="width: 15px; height: 15px; margin-right: 5px;"
+                                        <?php if (1 == 2): ?>
+                                        <img style="width: 15px; height: 15px; margin-right: 5px; margin-top: 5px;"
                                              src="<?= get_template_directory_uri() . '/assets/images/icon/tick.png'; ?>">
+                                        <?php endif; ?>
+                                        <a href="<?= get_the_permalink() ?>">
                                         <?= get_the_title() ?>
+                                        </a>
                                     </h6>
-                                    <div><?= BMIFontendHelper::cutString(get_the_excerpt(), 120); ?></div>
-                                    <div><a href="<?= get_the_permalink() ?>">Xem thêm</a></div>
+                                    <div><?= BMIFontendHelper::cutString(get_the_excerpt(), 90) . ' [..]'; ?></div>
+                                    <div><a href="<?= get_the_permalink() ?>">Xem thêm >> </a></div>
                                 </div>
                             </div>
                         </div>
@@ -67,36 +73,6 @@ $nfpost = new WP_Query($args);
             wp_reset_query() ?>
 
         </div>
-
-        <?php if (!wp_is_mobile()): ?>
-        <div id="news-features" class="news-features" style="border: none;">
-		    <?php while ($nfpost->have_posts()) : $nfpost->the_post(); ?>
-                <div>
-                    <div class="row">
-
-                        <div class="col-md-12">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <img src="https://satmythuathd.files.wordpress.com/2015/08/loi-son-tinh-dien.jpg"
-                                         style="width: 100%">
-                                </div>
-                                <div class="col-md-8" <?= (!wp_is_mobile())?'style="padding-left: 0;"':null ?>>
-                                    <h6 style="display: inline-flex;">
-                                        <img style="width: 15px; height: 15px; margin-right: 5px;"
-                                             src="<?= get_template_directory_uri() . '/assets/images/icon/tick.png'; ?>">
-									    <?= get_the_title() ?>
-                                    </h6>
-                                    <p><?= BMIFontendHelper::cutString(get_the_excerpt(), 120); ?></p>
-                                    <p><a href="<?= get_the_permalink() ?>">Xem thêm</a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-		    <?php endwhile;
-		    wp_reset_query() ?>
-        </div>
-        <?php endif; ?>
 
 
     </div>

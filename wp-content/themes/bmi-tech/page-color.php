@@ -56,7 +56,7 @@ $general = $config->general->params;
         <div class="row">
             <div class="col-md-4" style="background: #E3EDF6">
 
-                <div class="row ourservice">
+                <div class="row ourservice" style="margin-top: 30px;">
 	                <?php for ($i = 0; $i < 4; $i ++ ): ?>
 		                <?php
 		                $img = get_template_directory_uri() . '/assets/images/icon/direction1.png';
