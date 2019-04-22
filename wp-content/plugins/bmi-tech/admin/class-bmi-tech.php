@@ -480,7 +480,7 @@ class BMI_ADMIN_INIT {
 
         $opts = apply_filters( 'now-hiring-cpt-options', $opts );
 
-        register_post_type( strtolower( $cpt_name ), $opts );
+        //register_post_type( strtolower( $cpt_name ), $opts );
 
     }
 
