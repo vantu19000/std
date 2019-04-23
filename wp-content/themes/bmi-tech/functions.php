@@ -15,6 +15,9 @@ if ( ! function_exists( 'bmi_setup' ) ) :
 		add_image_size('product_thumb', 223, 167);
 		add_image_size('cate_product_thumb', 233, 166);
 		add_image_size('home_cate_product', 255, 255);
+		// Dich vu cua chung toi
+		add_image_size('home_service', 540, 350);
+
 
 		add_image_size('home_slider', 1519, 554);
 

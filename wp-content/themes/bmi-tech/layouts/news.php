@@ -37,7 +37,7 @@ $features = new WP_Query($args);
         <div class="newsslider slider">
             <div class="newslider">
                 <?php while ($features->have_posts()) : $features->the_post(); ?>
-                    <?php $thumbnail = get_the_post_thumbnail_url(); ?>
+                    <?php $thumbnail = get_the_post_thumbnail_url(null, 'home_service'); ?>
                     <div class="contentnews">
                         <div class="row">
                             <div class="col-md-6 newsThumb">

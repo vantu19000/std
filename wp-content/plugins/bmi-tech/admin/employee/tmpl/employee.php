@@ -7,6 +7,9 @@
 $count = 4;
 if (is_array($data->params->data)){
     $count = count($data->params->data);
+    if ($count < 4){
+        $count = 4;
+    }
 }
 
 ?>

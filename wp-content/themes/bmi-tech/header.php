@@ -15,17 +15,21 @@
     <meta name="msapplication-config" content="https://simpleqode.bitbucket.io/incline/assets/ico/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+    <?php if (1 == 2): ?>
     <!-- Plugins CSS -->
-<!--    <link rel="stylesheet" href="--><?//= get_template_directory_uri() ?><!--/assets/css/bootstrap.min.css">-->
+    <!--<link rel="stylesheet" href="<?= get_template_directory_uri() ?>/assets/css/bootstrap.min.css">-->
+    <!--<link rel="stylesheet" href="<?= get_template_directory_uri() ?>/assets/css/jquery.bxslider.css">-->
+    <!--<link rel="stylesheet" href="<?= get_template_directory_uri() ?>/assets/css/styles.css">-->
+    <!--<link rel="stylesheet" href="<?= get_template_directory_uri() ?>/assets/css/bootsnav.css"> -->
+    <!--<link rel="stylesheet" href="<?= get_template_directory_uri() ?>/assets/css/animate.css"> -->
+    <?php endif; ?>
+
 
     <?php require 'layouts/css/bootstrap.php' ?>
-
-    <link rel="stylesheet" href="<?= get_template_directory_uri() ?>/assets/css/jquery.bxslider.css">
-    <link rel="stylesheet" href="<?= get_template_directory_uri() ?>/assets/css/styles.css">
-
-    <link rel="stylesheet" href="<?= get_template_directory_uri() ?>/assets/css/bootsnav.css">
-    <link rel="stylesheet" href="<?= get_template_directory_uri() ?>/assets/css/animate.css">
-<!--    <link rel="stylesheet" href="--><?//= get_template_directory_uri() ?><!--/assets/css/stylenav.css">-->
+    <?php require 'layouts/css/bxSlider.php' ?>
+    <?php require 'layouts/css/style.php' ?>
+    <?php require 'layouts/css/bootsnav.php' ?>
+    <?php require 'layouts/css/animate.php' ?>
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
