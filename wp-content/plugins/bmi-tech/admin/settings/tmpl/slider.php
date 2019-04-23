@@ -39,7 +39,7 @@ if (is_array($data->params->data)){
 		<tr class="slider">
 			<th scope="row"><label for="url<?= $i ?>">Ảnh slide</label></th>
 			<td>
-				<input name="data[params][data][][attachments]" type="text" id="attachments<?= $i ?>" value="<?= $value->attachments ?>" readonly class="regular-text">
+				<input name="data[params][data][][url]" type="text" id="url<?= $i ?>" value="<?= $value->url ?>" readonly class="regular-text">
 				<input class="upload_image_button button button-primary" type="button" value="Chọn ảnh" index="<?= $i ?>" />
 			</td>
 		</tr>
@@ -49,7 +49,7 @@ if (is_array($data->params->data)){
 	<tr class="sliderclone" style="display: none">
 		<th scope="row"><label for="url">Ảnh slide</label></th>
 		<td>
-			<input name="data[params][data][][attachments]" type="text" id="attachments" readonly class="regular-text">
+			<input name="data[params][data][][url]" type="text" id="url" readonly class="regular-text">
 
 			<input class="upload_image_button button button-primary" type="button" value="Chọn ảnh" index="" />
 		</td>
@@ -97,12 +97,12 @@ if (is_array($data->params->data)){
                 var url = attachment.url;
                 console.log(url);
 
-                if (typeof attachment.sizes.ABOUT_US_AVATAR !== "undefined"){
-                    url = attachment.sizes.ABOUT_US_AVATAR.url;
+                if (typeof attachment.sizes.home_slider !== "undefined"){
+                    url = attachment.sizes.home_slider.url;
                 }
 
                 // $('#url'+index).val(url);
-                $('#attachments'+index).val(attachment.id);
+                $('#url'+index).val(url);
 
             });
             mediaUploader.open();

@@ -8,14 +8,7 @@ $data = $sliders->params->data;
     <div class="bxslider">
         <?php if (is_array($data) && count($data) > 0): ?>
 		<?php foreach ($data AS $value): ?>
-            <?php
-                if ($value) {
-                    $thumb = wp_get_attachment_image_url($value->attachments, 'home_slider');
-                }
-            ?>
-            <?php if (isset($thumb) && $thumb): ?>
-            <div><img class="lazyload" src="https://sontinhdiencongnghiep.com/wp-content/uploads/2019/04/trangchuslide5-1344x490.jpg" data-src="<?= $thumb ?>" alt="Slide home page"></div>
-		    <?php endif; ?>
+            <div><img class="lazyload" src="https://sontinhdiencongnghiep.com/wp-content/uploads/2019/04/trangchuslide5-1344x490.jpg" data-src="<?= $value->url ?>" alt="Slide home page"></div>
         <?php endforeach; ?>
         <?php endif; ?>
     </div>
