@@ -66,49 +66,6 @@ $tech = new WP_Query($args);
         </div>
 
 
-        <script>
-            $(document).ready(function () {
-                $('.painTextSliderItem').slick({
-                    slidesToShow: 3,
-                    slidesToScroll: 1,
-                    arrows: false,
-                    autoplay: false,
-                    responsive: [
-                        {
-                            breakpoint: 1200,
-                            settings: {
-                                slidesToShow: 3,
-                                slidesToScroll: 1
-                            }
-                        },
-                        {
-                            breakpoint: 1008,
-                            settings: {
-                                slidesToShow: 3,
-                                slidesToScroll: 1
-                            }
-                        },
-                        {
-                            breakpoint: 800,
-                            settings: {
-                                slidesToShow: 1,
-                                slidesToScroll: 1
-                            }
-                        }
-
-                    ]
-                });
-                $('#technoSliderNext').click(function () {
-                    $('.painTextSliderItem').slick('slickNext');
-                })
-                $('#technoSliderPrev').click(function () {
-                    $('.painTextSliderItem').slick('slickPrev');
-                })
-
-            });
-        </script>
-
-
     </div>
     <style>
         .paintTextSlider {

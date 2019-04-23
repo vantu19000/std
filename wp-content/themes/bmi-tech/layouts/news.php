@@ -6,31 +6,6 @@ $args = array(
 $features = new WP_Query($args);
 ?>
 
-<script>
-
-    $(document).ready(function () {
-        $('.newslider').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: false,
-            autoplay: true,
-            // infinite: true,
-            // cssEase: 'linear',
-            // variableWidth: true,
-            // variableHeight: true
-        });
-        $("#newSliderPrev").click(function () {
-            $('.newslider').slick('slickPrev');
-        })
-        $("#newSliderNext").click(function () {
-            $('.newslider').slick('slickNext');
-        })
-
-    });
-
-</script>
-
-
 <section class="section news">
     <div class="container">
 

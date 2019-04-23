@@ -81,47 +81,4 @@ $nfpost = new WP_Query($args);
 
     </div>
 
-    <script>
-        $(document).ready(function () {
-
-            $('.news-features').slick({
-                slidesToShow: 2,
-                slidesToScroll: 1,
-                arrows: false,
-                autoplay: false,
-                responsive: [
-                    {
-                        breakpoint: 1200,
-                        settings: {
-                            slidesToShow: 2,
-                            slidesToScroll: 1
-                        }
-                    },
-                    {
-                        breakpoint: 1008,
-                        settings: {
-                            slidesToShow: 2,
-                            slidesToScroll: 1
-                        }
-                    },
-                    {
-                        breakpoint: 800,
-                        settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1
-                        }
-                    }
-
-                ]
-            });
-
-            $(".nfnext").click(function () {
-                $('#news-features').slick('slickNext');
-            })
-            $(".nfprev").click(function () {
-                $('#news-features').slick('slickPrev');
-            })
-        });
-    </script>
-
 </section>
