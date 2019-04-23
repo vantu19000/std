@@ -16,9 +16,12 @@
     <meta name="theme-color" content="#ffffff">
 
     <!-- Plugins CSS -->
-    <link rel="stylesheet" href="<?= get_template_directory_uri() ?>/assets/css/bootstrap.min.css">
+<!--    <link rel="stylesheet" href="--><?//= get_template_directory_uri() ?><!--/assets/css/bootstrap.min.css">-->
+
+    <?php require 'layouts/css/bootstrap.php' ?>
+
     <link rel="stylesheet" href="<?= get_template_directory_uri() ?>/assets/css/jquery.bxslider.css">
-    <link rel="stylesheet" href="<?= get_template_directory_uri() ?>/assets/css/styles.css?random=<?= mt_rand(1000, 9999) ?>">
+    <link rel="stylesheet" href="<?= get_template_directory_uri() ?>/assets/css/styles.css">
 
     <link rel="stylesheet" href="<?= get_template_directory_uri() ?>/assets/css/bootsnav.css">
     <link rel="stylesheet" href="<?= get_template_directory_uri() ?>/assets/css/animate.css">
