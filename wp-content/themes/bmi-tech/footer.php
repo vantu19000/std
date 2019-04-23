@@ -88,47 +88,6 @@ $general = $config->general->params;
                 </div>
             </div>
 
-            <?php if (1 == 2): ?>
-
-                <div class="col-md-3 text-center socialbox">
-                    <div class="footer-info">
-                        <ul class="footer-list">
-                            <li><a href="<?= get_site_url() ?>">Trang chủ</a></li>
-                            <li><a href="/bang-mau/">Bảng màu</a></li>
-                            <li><a href="/san-pham/">Sản phẩm</a></li>
-                            <li><a href="/bang-mau/">Công trình</a></li>
-                            <li><a href="/tin-tuc/">Tin tức</a></li>
-                            <li><a href="/videos">Video</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-            <div class="col-md-4 footer-info">
-                <ul class="footer-list product-list">
-                    <li><a href="javascript:void(0)">Danh mục sản phẩm</a></li>
-                    <li><a href="/san-pham/#product1">Cửa cổng</a></li>
-                    <li><a href="/san-pham/#product2">Vỏ tủ điện</a></li>
-                    <li><a href="/san-pham/#product3">Kệ giá hàng</a></li>
-                    <li><a href="/san-pham/#product4">Thang - Máng cáp</a></li>
-                    <li><a href="#">Sản phẩm nổi bật</a></li>
-                </ul>
-            </div>
-
-            <div class="col-md-4 footer-info">
-                <div class="company-information">
-                    <h6>Công ty cổ phần công nghệ cao HP Việt Nam</h6>
-
-                    <ul>
-                        <li>ADD: Thôn An Lạc, xã Trưng Trắc, huyện Văn Lâm, Hưng Yên</li>
-                        <li>Website: sontinhdiencongnghiep.com</li>
-                        <li onclick="window.open('tel:0968300485')">TEl: 0968 30 04 85</li>
-                        <li onclick="window.open('tel:0934123128')">TEl: 0934 123 128</li>
-                    </ul>
-                </div>
-            </div>
-
-            <?php endif; ?>
-
         </div>
     </div>
 
@@ -142,7 +101,7 @@ $general = $config->general->params;
 
 </body>
 
-<?php wp_footer() ?>
+<?php wp_footer(); ?>
 
 <div class="hotline">
     <?php if (!wp_is_mobile()): ?>
@@ -174,5 +133,6 @@ $general = $config->general->params;
 <script src="<?= get_template_directory_uri() ?>/assets/js/lazysizes.min.js"></script>
 
 <?php require 'layouts/js/custom.php' ?>
+<?php require 'layouts/js/menu.php' ?>
 
 </html>

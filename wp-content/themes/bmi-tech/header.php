@@ -21,6 +21,8 @@
     <!--<link rel="stylesheet" href="<?= get_template_directory_uri() ?>/assets/css/bootsnav.css"> -->
     <!--<link rel="stylesheet" href="<?= get_template_directory_uri() ?>/assets/css/animate.css"> -->
     <!--        <link rel="stylesheet" href="<?= get_template_directory_uri() ?>/assets/libraries/slick/slick.css">-->
+     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.6.3/css/all.min.css" crossorigin="anonymous">-->
+
     <?php endif; ?>
 
 
@@ -30,8 +32,8 @@
     <?php require 'layouts/css/bootsnav.php' ?>
     <?php require 'layouts/css/animate.php' ?>
     <?php require 'layouts/css/slick.php' ?>
+    <?php require 'layouts/css/fontawesome.php' ?>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.6.3/css/all.min.css" crossorigin="anonymous">
 
 
     <?php wp_head(); ?>
