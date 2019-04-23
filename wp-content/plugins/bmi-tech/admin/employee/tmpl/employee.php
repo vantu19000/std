@@ -115,10 +115,9 @@ if (is_array($data->params->data)){
                 var attachment = mediaUploader.state().get('selection').first().toJSON();
                 console.log(attachment);
                 var url = attachment.url;
-                console.log(url);
 
-                if (typeof attachment.sizes.ABOUT_US_AVATAR !== "undefined"){
-                    url = attachment.sizes.ABOUT_US_AVATAR.url;
+                if (typeof attachment.sizes.employee_avatar !== "undefined"){
+                    url = attachment.sizes.employee_avatar.url;
                 }
 
                 $('#url'+index).val(url);

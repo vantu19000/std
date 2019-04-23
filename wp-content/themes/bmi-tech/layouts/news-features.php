@@ -40,6 +40,10 @@ $nfpost = new WP_Query($args);
         <div id="news-features" class="news-features" style="border: none;">
 
             <?php while ($nfpost->have_posts()) : $nfpost->the_post(); ?>
+            <?php
+                $thumb = get_the_post_thumbnail_url(null, 'home_news_slider');
+                if (!$thumb) $thumb = get_template_directory_uri().'/assets/images/loi-son-tinh-dien.jpg';
+            ?>
                 <div>
                     <div class="row">
 
@@ -47,7 +51,7 @@ $nfpost = new WP_Query($args);
                             <div class="row">
                                 <div class="col-md-4">
                                     <a href="<?= get_the_permalink() ?>">
-                                    <img src="https://satmythuathd.files.wordpress.com/2015/08/loi-son-tinh-dien.jpg"
+                                    <img src="<?= $thumb ?>"
                                          style="width: 100%;margin-top: 5px;">
                                     </a>
                                 </div>

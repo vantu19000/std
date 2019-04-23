@@ -17,9 +17,13 @@ if ( ! function_exists( 'bmi_setup' ) ) :
 		add_image_size('home_cate_product', 255, 255);
 		// Dich vu cua chung toi
 		add_image_size('home_service', 540, 350);
+		// Employee avatar
+		add_image_size('employee_avatar', 250, 250);
+		//Tin tuc noi bat
+        add_image_size('home_news_slider', 160, 120);
 
 
-		add_image_size('home_slider', 1519, 554);
+		add_image_size('home_slider', 1349, 490);
 
 		register_nav_menus( array(
 			'menu-primary' => esc_html__( 'Primary Menu', 'bmi' ),
@@ -33,10 +37,10 @@ if ( ! function_exists( 'bmi_setup' ) ) :
 		) );
 
 		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'bmi_custom_background_args', array(
-			'default-color' => 'ffffff',
-			'default-image' => '',
-		) ) );
+//		add_theme_support( 'custom-background', apply_filters( 'bmi_custom_background_args', array(
+//			'default-color' => 'ffffff',
+//			'default-image' => '',
+//		) ) );
 
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
@@ -52,6 +56,15 @@ if ( ! function_exists( 'bmi_setup' ) ) :
 
 endif;
 add_action( 'after_setup_theme', 'bmi_setup' );
+
+function post_image_sizes($sizes){
+    $custom_sizes = array(
+        'employee_avatar' => 'employee_avatar',
+        'home_slider' => 'home_slider',
+    );
+    return array_merge( $sizes, $custom_sizes );
+}
+add_filter('image_size_names_choose', 'post_image_sizes');
 
 require 'inc/helper.php';
 require 'inc/config.php';
