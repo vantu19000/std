@@ -1,0 +1,41 @@
+@font-face {
+    font-family: NexaBold;
+    src: url(../fonts/SVN-Nexa-Bold.ttf);
+}
+@font-face {
+    font-family: FesterBold;
+    /*src: url(../fonts/Fester-Bold.otf);*/
+    src: url(../fonts/new/SanFranciscoDisplay-Bold.otf);
+}
+@font-face {
+    font-family: SanFranciscoDisplayBold;
+    src: url(../fonts/new/SanFranciscoDisplay-Medium.otf);
+}
+@font-face {
+    font-family: SanFranciscoDisplayMedium;
+    src: url(../fonts/San-Francisco-Display-Medium.ttf);
+}
+@font-face {
+    font-family: SanFranciscoDisplayLight;
+    src: url(../fonts/SF-Pro-Display-Light.ttf);
+}
+@font-face {
+    font-family: SanFranciscoDisplayBlack;
+    src: url(../fonts/SF-Pro-Display-Black.otf);
+}
+@font-face {
+    font-family: SanFranciscoDisplayRegular;
+    src: url(../fonts/SanFranciscoDisplayRegular.ttf);
+}
+@font-face {
+    font-family: SanFranciscoDisplayUltra;
+    src: url(../fonts/SF-Pro-Display-Ultralight.otf);
+}
+@font-face {
+    font-family: SFHeavy;
+    src: url("../fonts/SF-Pro-Display-Heavy.ttf");
+}
+@font-face {
+    font-family: SanFranciscoDisplayThin;
+    src: url("../fonts/SF-Pro-Display-Thin.otf");
+}

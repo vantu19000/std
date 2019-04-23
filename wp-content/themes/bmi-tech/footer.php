@@ -124,6 +124,15 @@ $general = $config->general->params;
 <style>.hotline{position:fixed;left:0;z-index:9999999;height:43px;width:350px;color:#fff;padding:2px 0 2px 12px;bottom:20px;background:#ff7809;border-radius:50px}.hotline-no a{color:#fff}.hotline .hotline-no{float:left}.faa-wrench.animated{animation:wrench 1s ease infinite;animation-name:wrench;animation-duration:1s;animation-timing-function:ease;animation-delay:initial;animation-iteration-count:infinite;animation-direction:initial;animation-fill-mode:initial;animation-play-state:initial}.hotline p:first-child{font-family:utm_avobold,sans-serif;font-size:14px}.hotline p{font-size:11px;font-family:utm_avoregular,sans-serif;margin:0; padding-top:5px;}.hotline p{text-align:center}.hotline img{float:left;margin:11px 18px 0 3px}img{border:0;vertical-align:middle}@-webkit-keyframes wrench{0%{-webkit-transform:rotate(-12deg);transform:rotate(-12deg)}8%{-webkit-transform:rotate(12deg);transform:rotate(12deg)}10%,28%,30%,48%,50%,68%{-webkit-transform:rotate(24deg);transform:rotate(24deg)}18%,20%,38%,40%,58%,60%{-webkit-transform:rotate(-24deg);transform:rotate(-24deg)}100%,75%{-webkit-transform:rotate(0);transform:rotate(0)}}@keyframes wrench{0%{-webkit-transform:rotate(-12deg);-ms-transform:rotate(-12deg);transform:rotate(-12deg)}8%{-webkit-transform:rotate(12deg);-ms-transform:rotate(12deg);transform:rotate(12deg)}10%,28%,30%,48%,50%,68%{-webkit-transform:rotate(24deg);-ms-transform:rotate(24deg);transform:rotate(24deg)}18%,20%,38%,40%,58%,60%{-webkit-transform:rotate(-24deg);-ms-transform:rotate(-24deg);transform:rotate(-24deg)}100%,75%{-webkit-transform:rotate(0);-ms-transform:rotate(0);transform:rotate(0)}}.faa-parent.animated-hover:hover>.faa-wrench,.faa-wrench.animated,.faa-wrench.animated-hover:hover{-webkit-animation:wrench 1s ease infinite;animation:wrench 1s ease infinite;transform-origin-x:90%;transform-origin-y:35%;transform-origin-z:initial}.faa-parent.animated-hover:hover>.faa-wrench.faa-fast,.faa-wrench.animated-hover.faa-fast:hover,.faa-wrench.animated.faa-fast{-webkit-animation:wrench 1.2s ease infinite;animation:wrench 1.2s ease infinite}.faa-parent.animated-hover:hover>.faa-wrench.faa-slow,.faa-wrench.animated-hover.faa-slow:hover,.faa-wrench.animated.faa-slow{-webkit-animation:wrench 3.7s ease infinite;animation:wrench 3.7s ease infinite}</style>
 <?php endif; ?>
 
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2&appId=1879960102295811&autoLogAppEvents=1';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="<?= get_template_directory_uri() ?>/assets/js/bootstrap.bundle.min.js"></script>
 <script src="<?= get_template_directory_uri() ?>/assets/js/bootsnav.js"></script>
