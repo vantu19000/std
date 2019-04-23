@@ -36,13 +36,7 @@ if ( ! function_exists( 'bmi_setup' ) ) :
 			'caption',
 		) );
 
-		// Set up the WordPress core custom background feature.
-//		add_theme_support( 'custom-background', apply_filters( 'bmi_custom_background_args', array(
-//			'default-color' => 'ffffff',
-//			'default-image' => '',
-//		) ) );
-
-		// Add theme support for selective refresh for widgets.
+        // Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
 		add_theme_support( 'custom-logo', array(
@@ -114,8 +108,15 @@ function bmi_widgets_init() {
 }
 add_action( 'widgets_init', 'bmi_widgets_init' );
 
+//remove wp-block-library-css
+add_action( 'wp_print_styles', 'wps_deregister_styles', 100 );
+function wps_deregister_styles() {
+    wp_dequeue_style( 'wp-block-library' );
+}
+
+
 function bmi_scripts() {
-	wp_enqueue_style( 'bmi-style', get_stylesheet_uri() );
+	//wp_enqueue_style( 'bmi-style', get_stylesheet_uri() );
 
 //	wp_enqueue_script( 'bmi-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
@@ -139,13 +140,6 @@ define('NEWS_THUMB',get_template_directory_uri() . '/assets/images/default-news-
 define('THEME_PATH', get_template_directory().'/');
 define('THEME_URI', get_template_directory_uri().'/');
 define('CHILD_URI', get_stylesheet_directory_uri().'/');
-
-
-//Set content width
-$content_width=1140;
-
-//Load language files
-//load_theme_textdomain('quangbinhtravel', THEME_PATH.'languages');
 
 
 require 'inc/form-shortcode.php';

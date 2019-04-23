@@ -64,7 +64,7 @@ $general = $config->general->params;
 
 <section class="section body-banner">
     <div>
-        <img src="<?= get_template_directory_uri() ?>/assets/images/banner/bannerindex.jpg" style="width: 100%">
+        <img src="<?= get_template_directory_uri() ?>/assets/images/bg/bannerindex.jpeg" style="width: 100%">
     </div>
 </section>
 

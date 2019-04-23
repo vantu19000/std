@@ -11,9 +11,7 @@
 
     <!-- Favicons -->
 
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-config" content="https://simpleqode.bitbucket.io/incline/assets/ico/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
+    <meta http-equiv="Cache-control" content="public">
 
     <?php if (1 == 2): ?>
     <!-- Plugins CSS -->
@@ -22,6 +20,7 @@
     <!--<link rel="stylesheet" href="<?= get_template_directory_uri() ?>/assets/css/styles.css">-->
     <!--<link rel="stylesheet" href="<?= get_template_directory_uri() ?>/assets/css/bootsnav.css"> -->
     <!--<link rel="stylesheet" href="<?= get_template_directory_uri() ?>/assets/css/animate.css"> -->
+    <!--        <link rel="stylesheet" href="<?= get_template_directory_uri() ?>/assets/libraries/slick/slick.css">-->
     <?php endif; ?>
 
 
@@ -30,19 +29,15 @@
     <?php require 'layouts/css/style.php' ?>
     <?php require 'layouts/css/bootsnav.php' ?>
     <?php require 'layouts/css/animate.php' ?>
+    <?php require 'layouts/css/slick.php' ?>
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<!--    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>-->
-    <script src="<?= get_template_directory_uri() ?>/assets/js/jquery.bxslider.min.js"></script>
     <script src="<?= get_template_directory_uri() ?>/assets/js/bootstrap.bundle.min.js"></script>
     <script src="<?= get_template_directory_uri() ?>/assets/js/bootsnav.js"></script>
+    <script src="<?= get_template_directory_uri() ?>/assets/libraries/slick/slick.js"></script>
 
-    <?php if (1==1): ?>
-        <script src="<?= get_template_directory_uri() ?>/assets/libraries/slick/slick.js"></script>
-        <link rel="stylesheet" href="<?= get_template_directory_uri() ?>/assets/libraries/slick/slick.css">
-    <?php endif; ?>
     <?php wp_head(); ?>
 
     <div id="fb-root"></div>

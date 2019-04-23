@@ -4,14 +4,6 @@ $sliders = $config->slider;
 $data = $sliders->params->data;
 ?>
 
-<script>
-    jQuery(document).ready(function(){
-        jQuery('.bxslider').bxSlider({
-            auto: true,
-        });
-    });
-</script>
-
 <section class="section slider">
     <div class="bxslider">
         <?php if (is_array($data) && count($data) > 0): ?>
