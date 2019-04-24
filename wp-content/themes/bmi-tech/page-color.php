@@ -18,6 +18,8 @@ $general = $config->general->params;
 
 ?>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="<?= get_template_directory_uri() ?>/assets/js/bootstrap.bundle.min.js"></script>
     <style>
         h3 {
             font-size: 25px;

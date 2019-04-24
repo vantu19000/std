@@ -15,6 +15,10 @@ $terms = get_terms($taxonomy);
 
 
 ?>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="<?= get_template_directory_uri() ?>/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= get_template_directory_uri() ?>/assets/js/bootsnav.js"></script>
+    <script src="<?= get_template_directory_uri() ?>/assets/libraries/slick/slick.js"></script>
 
 <?php require 'layouts/slide8.php'; ?>
 
