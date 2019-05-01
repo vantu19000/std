@@ -64,9 +64,9 @@ $postType = get_post_type();
 
 							<?php if ( $postType == 'bmi_product' ): ?>
 
-                                <div class="productitem col-6 col-md-3">
+                                <div class="productitem col-6 col-md-4">
                                     <a href="<?= get_the_permalink() ?>">
-                                        <img style="height: 289px; width: 100%"
+                                        <img style="min-height: 150px; max-height: 220px; width: 100%"
                                              src="<?= $thumb ?>" alt="">
                                         <p class="text-center title-product" style="margin-top: 5px;color: #0463be;">
 											<?= get_the_title() ?>

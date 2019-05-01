@@ -144,4 +144,30 @@ $general = $config->general->params;
 <?php require 'layouts/js/custom.php' ?>
 <?php require 'layouts/js/menu.php' ?>
 
+<?php $posttype = get_post_type(); if ($posttype == 'bmi_product'): ?>
+    <script src="<?= get_template_directory_uri() ?>/assets/js/slick-lightbox.min.js"></script>
+
+    <script type="text/javascript">
+        jQuery('#lightbox_product').slickLightbox();
+
+        $('.slider-for').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            asNavFor: '.slider-nav'
+        });
+        $('.slider-nav').slick({
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            asNavFor: '.slider-for',
+            dots: true,
+            arrows: true,
+            centerMode: true,
+            focusOnSelect: true
+        });
+    </script>
+
+<?php endif; ?>
+
 </html>
