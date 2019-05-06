@@ -41,7 +41,7 @@ $nfpost = new WP_Query($args);
 
             <?php while ($nfpost->have_posts()) : $nfpost->the_post(); ?>
             <?php
-                $thumb = get_the_post_thumbnail_url(null, 'home_news_slider');
+                $thumb = get_the_post_thumbnail_url(null, 'medium');
                 if (!$thumb) $thumb = get_template_directory_uri().'/assets/images/loi-son-tinh-dien.jpg';
             ?>
                 <div>

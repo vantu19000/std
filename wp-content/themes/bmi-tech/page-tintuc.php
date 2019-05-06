@@ -67,7 +67,7 @@ $news = new WP_Query($args);
             <div class="col-md-8">
 
             <?php while ($news->have_posts()) : $news->the_post(); ?>
-                <?php $thumbnail = get_the_post_thumbnail_url($post->ID, 'product_cate'); ?>
+                <?php $thumbnail = get_the_post_thumbnail_url($post->ID, 'medium'); ?>
 
                 <div class="row" style="margin-top: 30px">
                     <div class="col-md-4">

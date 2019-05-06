@@ -33,7 +33,11 @@
     <?php require 'layouts/css/slick.php' ?>
     <?php require 'layouts/css/fontawesome.php' ?>
 
-
+    <style>
+        .aligncenter{
+            text-align: center;
+        }
+    </style>
 
     <?php wp_head(); ?>
 
