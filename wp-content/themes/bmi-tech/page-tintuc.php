@@ -76,12 +76,12 @@ $news = new WP_Query($args);
                         </a>
                     </div>
                     <div class="col-md-8">
-                        <h6>
+                        <h3>
                             <a href="<?= get_the_permalink() ?>">
                                 <img src="<?= get_template_directory_uri() .'/assets/images/icon/tick.png'; ?>">
 	                            <?= get_the_title() ?>
                             </a>
-                        </h6>
+                        </h3>
                         <p><?= BMIFontendHelper::cutString(get_the_excerpt(), 100) ?></p>
                         <p><a href="<?= get_the_permalink() ?>">Xem thêm</a></p>
                     </div>

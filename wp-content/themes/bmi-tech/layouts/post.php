@@ -19,7 +19,7 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-8">
+			<div class="col-md-9">
 				<h1 class="post-title"><?= get_the_title(); ?></h1>
 				<div class="row">
 					<div class="col-md-12">
@@ -35,7 +35,7 @@
                 </div>
 
             </div>
-			<div class="col-md-4"  style="background: #E3EDF6">
+			<div class="col-md-3"  style="background: #E3EDF6">
                 <div class="mt-3"></div>
                 <?php dynamic_sidebar('left-sidebar-1'); ?>
 

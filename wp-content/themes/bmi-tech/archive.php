@@ -3,10 +3,10 @@
 <?php
 $postType = get_post_type();
 ?>
-<?php if ( $postType == 'bmi_product' ): ?>
-	<?php require 'layouts/slide-danhmuc-product.php'; ?>
+<?php if ($postType == 'bmi_product'): ?>
+    <?php require 'layouts/slide-danhmuc-product.php'; ?>
 <?php else: ?>
-	<?php require 'layouts/slide5.php'; ?>
+    <?php require 'layouts/slide5.php'; ?>
 <?php endif; ?>
 
     <div class="container">
@@ -15,7 +15,7 @@ $postType = get_post_type();
 
                 <h4 class="text-center tintuc-heading">CÔNG NGHỆ SƠN TĨNH ĐIỆN</h4>
 
-				<?php for ( $i = 0; $i < 2; $i ++ ): ?>
+                <?php for ($i = 0; $i < 2; $i++): ?>
                     <div class="row paint-text" style="margin-left: 0px;margin-bottom: 20px;">
                         <div class="col-8 col-md-8 techno-left">
                             <p class="month">Tháng 5</p>
@@ -28,7 +28,7 @@ $postType = get_post_type();
                                  style="background-image: url('https://satmythuathd.files.wordpress.com/2015/08/loi-son-tinh-dien.jpg');"></div>
                         </div>
                     </div>
-				<?php endfor; ?>
+                <?php endfor; ?>
 
                 <div class="row" style="margin-bottom: 15px;">
                     <div class="col-md-12 text-center">
@@ -43,7 +43,7 @@ $postType = get_post_type();
 
                 <div class="row">
                     <div class="col-md-12">
-						<?php dynamic_sidebar( 'left-sidebar-2' ) ?>
+                        <?php dynamic_sidebar('left-sidebar-2') ?>
                     </div>
                 </div>
 
@@ -54,48 +54,50 @@ $postType = get_post_type();
 
             <div class="col-md-8">
 
-                <div class="row" style="margin-top: 20px;">
-					<?php if ( have_posts() ) : ?>
-						<?php while ( have_posts() ) : the_post(); ?>
+                <?php if (have_posts()) : ?>
+                    <?php while (have_posts()) : the_post(); ?>
 
-							<?php
-							$thumb = get_the_post_thumbnail_url( null, 'medium' );
-							?>
+                        <?php
+                        $thumb = get_the_post_thumbnail_url(null, 'medium');
+                        ?>
 
-							<?php if ( $postType == 'bmi_product' ): ?>
+                        <?php if ($postType == 'bmi_product'): ?>
 
-                                <div class="productitem col-6 col-md-4">
+                            <div class="productitem col-6 col-md-4">
+                                <a href="<?= get_the_permalink() ?>">
+                                    <img style="min-height: 150px; max-height: 220px; width: 100%"
+                                         src="<?= $thumb ?>" alt="">
+                                    <p class="text-center title-product" style="margin-top: 5px;color: #0463be;">
+                                        <?= get_the_title() ?>
+                                    </p>
+                                </a>
+                            </div>
+
+                        <?php else: ?>
+
+                            <div class="row" style="margin-top: 30px">
+                                <div class="col-md-4">
+                                    <img src="<?= ($thumb) ? $thumb : NEWS_THUMB ?>"
+                                         style="width: 100%; max-height: 200px;">
+                                </div>
+                                <div class="col-md-8">
                                     <a href="<?= get_the_permalink() ?>">
-                                        <img style="min-height: 150px; max-height: 220px; width: 100%"
-                                             src="<?= $thumb ?>" alt="">
-                                        <p class="text-center title-product" style="margin-top: 5px;color: #0463be;">
-											<?= get_the_title() ?>
-                                        </p>
-                                    </a>
-                                </div>
-
-							<?php else: ?>
-
-                                <div class="row" style="margin-top: 30px">
-                                    <div class="col-md-4">
-                                        <img src="<?= ( $thumb ) ? $thumb : NEWS_THUMB ?>" style="width: 100%">
-                                    </div>
-                                    <div class="col-md-8">
-                                        <h6>
+                                        <h3>
                                             <img src="<?= get_template_directory_uri() . '/assets/images/icon/tick.png'; ?>">
-											<?= get_the_title() ?>
-                                        </h6>
-                                        <p><?= get_the_excerpt() ?></p>
-                                        <p><a href="<?= get_the_permalink() ?>">Xem thêm</a></p>
-                                    </div>
+                                            <?= get_the_title() ?>
+                                        </h3>
+                                    </a>
+
+                                    <p style="text-align: justify"><?= get_the_excerpt() ?></p>
+                                    <p><a href="<?= get_the_permalink() ?>">Xem thêm</a></p>
                                 </div>
+                            </div>
 
-							<?php endif; ?>
+                        <?php endif; ?>
 
-						<?php endwhile; ?>
+                    <?php endwhile; ?>
 
-					<?php endif; ?>
-                </div>
+                <?php endif; ?>
 
                 <div class="mt-5"></div>
 
