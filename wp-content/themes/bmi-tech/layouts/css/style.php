@@ -483,7 +483,6 @@
     }
 
     .raleted-box .raleted-title {
-        font-size: 20px;
         margin: 15px 0 15px 0;
         font-weight: 400;
         font-family: SanFranciscoDisplayBold

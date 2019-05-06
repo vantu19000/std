@@ -14,7 +14,7 @@
 					</ol>
 				</nav>
 
-                <div style="border-bottom: solid 4px #0463be;"></div>
+                <div style="border-bottom: solid 4px #0463be;margin-right: -15px;"></div>
 
 			</div>
 		</div>
@@ -53,16 +53,22 @@
 
 				<?php while ( $recent->have_posts() ) : $recent->the_post(); ?>
 
+                <?php
+                    $thumbbnail = get_the_post_thumbnail_url(null, 'medium');
+                    if (!$thumbbnail)
+                        $thumbbnail = get_template_directory_uri() .'/assets/images/news1.png';
+                    ?>
+
                 <div class="row">
                     <div class="col-md-12 raleted-box">
                         <a href="<?= get_the_permalink() ?>">
-                            <img src="<?= get_template_directory_uri() .'/assets/images/news1.png' ?>" alt="">
+                            <img src="<?= $thumbbnail ?>" alt="related news">
                             <h4 class="raleted-title" style="color: #0463be;">
                                 <img src="<?= get_template_directory_uri() .'/assets/images/icon/tick.png' ?>" alt="">
 		                        <?= get_the_title() ?>
                             </h4>
                         </a>
-                        <p><?= get_the_excerpt() ?></p>
+                        <p><?= BMIFontendHelper::cutString(get_the_excerpt(), 120) ?></p>
                         <a href="<?= get_the_permalink() ?>">Đọc thêm >></a>
 
                         <hr class="bottom-divide" />

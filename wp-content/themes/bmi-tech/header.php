@@ -59,6 +59,9 @@
         h6{
             font-size: 12px;
         }
+        .breadcrumb{
+            margin-bottom: 0;
+        }
     </style>
 
     <?php wp_head(); ?>

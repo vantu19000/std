@@ -77,8 +77,10 @@ $postType = get_post_type();
 
                             <div class="row" style="margin-top: 30px">
                                 <div class="col-md-4">
-                                    <img src="<?= ($thumb) ? $thumb : NEWS_THUMB ?>"
-                                         style="width: 100%; max-height: 200px;">
+                                    <a href="<?= get_the_permalink() ?>">
+                                        <img src="<?= ($thumb) ? $thumb : NEWS_THUMB ?>"
+                                             style="width: 100%; max-height: 200px;">
+                                    </a>
                                 </div>
                                 <div class="col-md-8">
                                     <a href="<?= get_the_permalink() ?>">
