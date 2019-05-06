@@ -4,10 +4,12 @@
 $postType = get_post_type();
 ?>
 <?php if ($postType == 'bmi_product'): ?>
-    <?php require 'layouts/slide-danhmuc-product.php'; ?>
+    <?php require 'layouts/arichive_product.php' ?>
+
+    <?php //require 'layouts/slide-danhmuc-product.php'; ?>
 <?php else: ?>
     <?php require 'layouts/slide5.php'; ?>
-<?php endif; ?>
+
 
 
 <?php
@@ -133,6 +135,8 @@ $technology = new WP_Query($args);
 
         </div>
     </div>
+
+<?php endif; ?>
 
 
 <?php

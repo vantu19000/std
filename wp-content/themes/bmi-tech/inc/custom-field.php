@@ -34,6 +34,35 @@ register_taxonomy( 'categories', array('bmi_color'), array(
 register_taxonomy_for_object_type( 'categories', 'bmi_color' );
 
 
+add_action('add_meta_boxes', 'add_color_options');
+function add_color_options(){
+    add_meta_box(
+        '_meta_video_info', // $id
+        'Thông tin màu', // $title
+        'display_color_option', // $callback
+        'bmi_color', // $page
+        'normal', // $context
+        'high'
+    );
+}
+function display_color_option($post) {
+    $colorId = json_decode(get_post_meta($post->ID, '_meta_color_id', true));
+    $colorCode = json_decode(get_post_meta($post->ID, '_meta_color_code', true));
+
+    echo '<div class="form-field form-required term-name-wrap">';
+    echo "<label for='color_id'>Mã màu</label>";
+    echo '<input required type="text" name="color_id" id="color_id" value="'.$colorId.'" />';
+    echo '</div><br>';
+
+
+    echo '<div class="form-field form-required term-name-wrap">';
+    echo "<label for='color_code'>Màu</label><br>";
+    echo '<input required type="color" name="color_code" id="color_code" value="'.$colorCode.'" />';
+    echo '</div>';
+}
+
+
+
 // ---------------------------------------------------------------------------------------------------//
 
 
@@ -443,6 +472,10 @@ function meta_gallery_save( $post_id )
 	    case 'bmi_product':
 		    update_post_meta( $post_id, '_meta_price', json_encode($_POST['product_price'],JSON_UNESCAPED_UNICODE));
 		    break;
+        case 'bmi_color':
+            update_post_meta( $post_id, '_meta_color_id', json_encode($_POST['color_id'],JSON_UNESCAPED_UNICODE));
+            update_post_meta( $post_id, '_meta_color_code', json_encode($_POST['color_code'],JSON_UNESCAPED_UNICODE));
+            break;
     }
 
     $gallery_nonce = $_POST['gallery_nonce'];
