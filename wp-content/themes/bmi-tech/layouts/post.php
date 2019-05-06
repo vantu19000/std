@@ -3,7 +3,7 @@
 <div class="main">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-12" style="border-bottom: solid 4px #0463be;">
+			<div class="col-md-12">
 				<nav aria-label="breadcrumb">
 					<ol class="breadcrumb">
 						<li class="breadcrumb-item">
@@ -13,6 +13,9 @@
 						<li class="breadcrumb-item active" aria-current="page"><?= get_the_title() ?></li>
 					</ol>
 				</nav>
+
+                <div style="border-bottom: solid 4px #0463be;"></div>
+
 			</div>
 		</div>
 		<div class="row">
