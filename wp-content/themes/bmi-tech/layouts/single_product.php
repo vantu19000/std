@@ -38,7 +38,7 @@ $items = array_slice($recentProduct, -5);
 					<div class="col-md-6">
 						<div class="row slider slider-for" id="lightbox_product">
                             <?php foreach ($images AS $image): ?>
-							<div class="col-md-12" style="padding: 0;">
+							<div class="col-md-12">
                                 <a href="<?= $image->url ?>">
                                     <img class="large-image"
                                         src="<?= $image->url ?>" alt="">
@@ -118,16 +118,19 @@ $items = array_slice($recentProduct, -5);
 		if (wp_is_mobile()){
 			$class = 'col-6';
 		}
+		$i = 0;
 		?>
 
         <div class="row">
             <?php foreach ($items AS $value): ?>
+            <?php $i ++; if ($i <= 4): ?>
             <div class="col-md-3 <?= $class ?> singleitem">
                 <a href="<?= get_the_permalink($value) ?>">
                     <img style="max-height: 200px;width: 100%;"
                          src="<?= get_the_post_thumbnail_url($value) ?>" alt="">
                 </a>
             </div>
+            <?php endif; ?>
             <?php endforeach; ?>
         </div>
 

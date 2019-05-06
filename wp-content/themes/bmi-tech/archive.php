@@ -9,27 +9,51 @@ $postType = get_post_type();
     <?php require 'layouts/slide5.php'; ?>
 <?php endif; ?>
 
+
+<?php
+
+$args = array(
+    'orderby' => 'date',
+    'posts_per_page' => '2',
+    'category_name' => 'tin-tuc'
+//    'category_name' => 'son-tinh-dien-cong-nghiep'
+);
+
+$technology = new WP_Query($args);
+
+?>
+
     <div class="container">
         <div class="row">
             <div class="col-md-4" style="background: #E3EDF6">
 
                 <h4 class="text-center tintuc-heading">CÔNG NGHỆ SƠN TĨNH ĐIỆN</h4>
 
-                <?php for ($i = 0; $i < 2; $i++): ?>
+                <?php while ($technology->have_posts()) : $technology->the_post(); ?>
+                    <?php $thumbnail = get_the_post_thumbnail_url($post->ID, 'medium'); ?>
+
                     <div class="row paint-text" style="margin-left: 0px;margin-bottom: 20px;">
                         <div class="col-8 col-md-8 techno-left">
                             <p class="month">Tháng 5</p>
-                            <h6>Công nghệ sơn tĩnh điện phương pháp bảo vệ kim loại tối ưu</h6>
-                            <p>Công nghệ sơn tĩnh điện phương điện phương pháp bảo vệ kim loại tối ưu</p>
-                            <p><a href="#">Xem thêm >> </a></p>
+                            <h6>
+                                <a href="<?= get_the_permalink() ?>">
+                                    <?= get_the_title() ?>
+                                </a>
+                            </h6>
+                            <p><?= BMIFontendHelper::cutString(get_the_excerpt(), 70) ?></p>
+                            <p><a href="<?= get_the_permalink() ?>">Xem thêm >> </a></p>
                         </div>
                         <div class="col-4 col-md-4" style="margin-left: -15px;">
                             <div class="techno-right"
-                                 style="background-image: url('https://satmythuathd.files.wordpress.com/2015/08/loi-son-tinh-dien.jpg');"></div>
+                                 style="background-image: url('<?= get_template_directory_uri() ?>/assets/images/loi-son-tinh-dien.jpg');"></div>
                         </div>
                     </div>
-                <?php endfor; ?>
 
+                <?php endwhile;
+                wp_reset_postdata(); ?>
+
+
+                <!--
                 <div class="row" style="margin-bottom: 15px;">
                     <div class="col-md-12 text-center">
                         <img src="<?= get_template_directory_uri() . '/assets/images/icon/nextpre.png'; ?>"
@@ -40,6 +64,7 @@ $postType = get_post_type();
                         </map>
                     </div>
                 </div>
+                -->
 
                 <div class="row">
                     <div class="col-md-12">

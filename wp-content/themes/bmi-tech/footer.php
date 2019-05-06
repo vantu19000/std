@@ -162,7 +162,7 @@ $general = $config->general->params;
             slidesToScroll: 1,
             asNavFor: '.slider-for',
             dots: true,
-            arrows: true,
+            arrows: false,
             centerMode: true,
             focusOnSelect: true
         });
