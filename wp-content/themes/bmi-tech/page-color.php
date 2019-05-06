@@ -16,6 +16,7 @@ $categories = get_terms(array(
 global $config;
 $general = $config->general->params;
 
+
 ?>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -158,7 +159,11 @@ $general = $config->general->params;
                     <?php //for ($i = 0; $i < 30; $i++): ?>
 	                <?php while ( $colors->have_posts() ) : $colors->the_post(); ?>
 
-                        <?php $color = get_field( 'ma_mau' ); ?>
+                        <?php
+                        $colorId = json_decode(get_post_meta(get_the_ID(), '_meta_color_id', true));
+                        $color = json_decode(get_post_meta(get_the_ID(), '_meta_color_code', true));
+                        ?>
+
 
                         <script>
                             $(document).ready(function () {
@@ -185,10 +190,10 @@ $general = $config->general->params;
                                     <div style="width: 45px;height: 45px; background: <?= $color ?>;"></div>
                                 </div>
                                 <div class="col-9 col-md-9" style="padding-left: 20px; padding-right: 0px;">
-                                    <h6 style="letter-spacing: 1px; color: #0463be;font-weight: normal; font-family: SanFranciscoDisplayRegular;">
-                                        <?= get_field('code') ?>
-                                    </h6>
-                                    <h6 style="letter-spacing: 1px; color: #0463be;font-weight: normal; font-family: SanFranciscoDisplayRegular;"><?= get_the_title() ?></h6>
+                                    <h4 style="letter-spacing: 1px; color: #0463be;">
+                                        <?= $colorId ?>
+                                    </h4>
+                                    <h4 style="letter-spacing: 1px; color: #0463be;"><?= get_the_title() ?></h4>
                                 </div>
                             </div>
 
