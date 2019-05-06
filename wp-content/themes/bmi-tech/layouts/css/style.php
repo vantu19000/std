@@ -436,12 +436,12 @@
 
     @media only screen and (min-width: 728px) {
         .banner-post .header-title {
-            font-size: 100px;
+            font-size: 70px;
             text-shadow: 2px 2px 5px #000
         }
 
         .banner-post .header-title-2 {
-            font-size: 100px;
+            font-size: 70px;
             text-shadow: 2px 2px 5px #000
         }
     }

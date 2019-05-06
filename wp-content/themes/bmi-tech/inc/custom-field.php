@@ -100,7 +100,7 @@ function bmi_product() {
 			'menu_position' => 4,
 			'public' => true,
 			'has_archive' => true,
-			'rewrite' => array('slug' => 'product'),
+			'rewrite' => array('slug' => 'san-pham'),
 			'supports' => array(
 				'title',
 				'thumbnail',
