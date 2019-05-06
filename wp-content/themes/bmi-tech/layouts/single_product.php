@@ -10,6 +10,8 @@ $items = array_slice($recentProduct, -5);
 
 <link rel="stylesheet" href="<?= get_template_directory_uri() ?>/assets/libraries/slick/slick-theme.css">
 
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
 <style>
     .slick-lightbox{position:fixed;top:0;left:0;z-index:9999;width:100%;height:100%;background:black;-webkit-transition:opacity 0.5s ease;transition:opacity 0.5s ease}.slick-lightbox .slick-loading .slick-list{background-color:transparent}.slick-lightbox .slick-prev{left:15px}.slick-lightbox .slick-next{right:15px}.slick-lightbox-hide{opacity:0}.slick-lightbox-hide.slick-lightbox-ie{-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";filter:alpha(opacity=0)}.slick-lightbox-hide-init{position:absolute;top:-9999px;opacity:0}.slick-lightbox-hide-init.slick-lightbox-ie{-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";filter:alpha(opacity=0)}.slick-lightbox-inner{position:fixed;top:0;left:0;width:100%;height:100%}.slick-lightbox-slick-item{text-align:center;overflow:hidden}.slick-lightbox-slick-item:before{content:'';display:inline-block;height:100%;vertical-align:middle;margin-right:-0.25em}.slick-caption-bottom .slick-lightbox-slick-item .slick-lightbox-slick-item .slick-lightbox-slick-caption{position:absolute;bottom:0;left:0;text-align:center;width:100%;margin-bottom:20px}.slick-caption-dynamic .slick-lightbox-slick-item .slick-lightbox-slick-item .slick-lightbox-slick-caption{display:block;text-align:center}.slick-lightbox-slick-item-inner{display:inline-block;vertical-align:middle;max-width:90%;max-height:90%}.slick-lightbox-slick-img{margin:0 auto;display:block;max-width:90%;max-height:90%}.slick-lightbox-slick-caption{margin:10px 0 0;color:white}.slick-lightbox-close{position:absolute;top:15px;right:15px;display:block;height:20px;width:20px;line-height:0;font-size:0;cursor:pointer;background:transparent;color:transparent;padding:0;border:none}.slick-lightbox-close:focus{outline:none}.slick-lightbox-close:before{font-family:"slick";font-size:20px;line-height:1;color:white;opacity:0.85;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;content:'×'}
     .slick-prev{z-index: 1;}
@@ -26,7 +28,7 @@ $items = array_slice($recentProduct, -5);
 						<li class="breadcrumb-item">
                             <a href="<?= get_site_url() ?>"><i class="fas fa-home"></i> Home</a>
                         </li>
-						<li class="breadcrumb-item"><a href="#">Sản phẩm</a></li>
+						<li class="breadcrumb-item"><a href="<?= get_site_url() ?>/san-pham/">Sản phẩm</a></li>
 						<li class="breadcrumb-item active" aria-current="page"><?= get_the_title() ?></li>
 					</ol>
 				</nav>
@@ -46,11 +48,13 @@ $items = array_slice($recentProduct, -5);
 							</div>
                             <?php endforeach; ?>
 						</div>
-						<div class="row slider slider-nav" style="margin-top: 20px;">
+						<div class="slider slider-nav" style="margin-top: 20px;">
 							<?php foreach ($images AS $image): ?>
-							<div class="col-md-12">
-                                <img class="small-image" src="<?= $image->url ?>" alt="">
-							</div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <img class="small-image" src="<?= $image->url ?>" alt="">
+                                </div>
+                            </div>
 							<?php endforeach; ?>
 						</div>
 					</div>

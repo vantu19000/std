@@ -9,7 +9,7 @@
 						<li class="breadcrumb-item">
                             <a href="<?= get_site_url() ?>"><i class="fas fa-home"></i> Trang chủ</a>
                         </li>
-						<li class="breadcrumb-item"><a href="<?= get_site_url() . '/tin-tuc/' ?>">Tin tức</a></li>
+						<li class="breadcrumb-item"><a href="<?= get_site_url() . '/category/tin-tuc/' ?>">Tin tức</a></li>
 						<li class="breadcrumb-item active" aria-current="page"><?= get_the_title() ?></li>
 					</ol>
 				</nav>
