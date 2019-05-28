@@ -33,6 +33,16 @@
     <?php require 'layouts/css/slick.php' ?>
     <?php require 'layouts/css/fontawesome.php' ?>
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140375077-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-140375077-1');
+    </script>
+
     <style>
         .aligncenter{
             text-align: center;
